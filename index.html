@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stamp Page Designer — Welcome</title>
+<style>
+  :root{--green:#2f5d3a;--ink:#222;--muted:#5a5a5a;--line:#ddd;--bg:#f7f5f0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  main{max-width:860px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:2rem;line-height:1.2;margin:0 0 8px}
+  .sub{font-size:1.15rem;color:#333;margin:0 0 20px}
+  p{font-size:1.05rem}
+  .tiles{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;margin:28px 0}
+  .tile{position:relative;display:block;background:#fff;border:1px solid #bbb;border-radius:4px;padding:26px 22px;text-decoration:none;color:var(--ink);box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  .tile::before{content:"";position:absolute;inset:7px;border:1.5px dashed #999;border-radius:2px;pointer-events:none}
+  .tile::after{content:"✦";position:absolute;top:10px;right:12px;font-size:.85rem;color:#999}
+  .tile:hover,.tile:focus{border-color:var(--green);outline:3px solid #cfe3d3}
+  .tile:hover::before,.tile:focus::before{border-color:var(--green)}
+  .tile strong{display:block;font-size:1.25rem;margin-bottom:6px;color:var(--green)}
+  .tile span{color:var(--muted)}
+  .note{background:#fff8e1;border:1px solid #e6c87a;border-radius:10px;padding:16px 18px;margin:24px 0}
+  .note strong{color:#6b4e00}
+  ul{font-size:1.05rem}
+  footer{margin-top:32px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);padding-top:16px}
+  a{color:var(--green)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Stamp Page Designer</h1>
+  <p class="sub">Make true-size stamp album pages, quickly, in your browser — no software to install.</p>
+
+  <p>This is a hobby tool for stamp collectors. You build a page by dragging stamp boxes to their real size in millimetres, on a 5&nbsp;mm grid, with the spacing and mount clearance you choose. Then you preview it and print it, or save it as a PDF, at 100% — so what you see on screen is what prints, stamp for stamp.</p>
+
+  <p>What it does, in short:</p>
+  <ul>
+    <li>Stamp boxes at exact sizes — Small, Medium, Large, Extra Large, or any custom rectangle, up to a 210&nbsp;×&nbsp;210&nbsp;mm plate block on A3.</li>
+    <li>Page Headers and Subheaders, description boxes, and a caption strip under every stamp.</li>
+    <li>S-numbers that follow each stamp in page order, even when you move, copy, or undo it.</li>
+    <li>Paper sizes Letter, A4, Legal, and A3, portrait only, with Classic or Dense margins and an optional punch-hole margin.</li>
+    <li>Warnings when stamps overlap or sit closer than your chosen spacing, counted by item, not by pair.</li>
+    <li>Preview that hides the working grid and colours, and Print / Save as PDF at 100% only — never “Fit to page”.</li>
+  </ul>
+
+  <p>There are no stamp pictures inside the boxes, by design. The boxes are for your real stamps. That keeps the pages light and the tool fast.</p>
+
+  <div class="tiles">
+    <a class="tile" href="how-to-video.html">
+      <strong>▶ How to Video</strong>
+      <span>A guided tour of the tool, on screen, button by button — about 5 minutes.</span>
+    </a>
+    <a class="tile" href="how-to.html">
+      <strong>📖 How to Documentation</strong>
+      <span>Section by section, button by button — what every part of the tool does.</span>
+    </a>
+    <a class="tile" href="stamp-page-designer.htm">
+      <strong>🧩 Open the Tool</strong>
+      <span>Start building a page. Opens the Stamp Page Designer, version 4.0.2.</span>
+    </a>
+  </div>
+
+  <div class="note">
+    <strong>Please read this before you start:</strong>
+    Your albums and settings live <em>in this browser, on this device</em>. There is no account, no cloud copy, and no project file to download or open. If you clear this browser's storage, your saved albums go with it. Your printed PDF is your permanent record — save that, and you can rebuild a page from it in under a minute.
+  </div>
+
+  <p>Save project and Print / Save as PDF are two different things. <strong>Save project</strong> keeps your editable page — paper, stamps, positions, captions, headers — in the browser, so you can come back and change it. <strong>Print / Save as PDF</strong> is the finished output only, and a PDF cannot be reopened as a project.</p>
+
+  <footer>
+    A hobby project, made for collectors, by a collector. Free to use, and shared in the hope it saves someone an evening of cutting and pasting.
+    <br>Tool version on this site: Stamp Page Designer 4.0.2.
+  </footer>
+</main>
+</body>
+</html>
