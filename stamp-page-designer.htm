@@ -199,10 +199,9 @@ button.opt.on { background: var(--accent-soft); border-color: var(--accent); fon
 /* test .htm printing: only the print sheets are printed */
 #print-root { display: none; }
 @media print {
-  body { background: #fff !important; }
   body > *:not(#print-root) { display: none !important; }
-  #print-root { display: block !important; background: #fff !important; }
-  .print-sheet { page-break-after: always; break-after: page; background: #fff !important; }
+  #print-root { display: block !important; }
+  .print-sheet { page-break-after: always; break-after: page; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
 @media (max-width: 1200px) { .workspace { grid-template-columns: 130px 1fr 360px; } .grid2 { grid-template-columns: 1fr; } }
