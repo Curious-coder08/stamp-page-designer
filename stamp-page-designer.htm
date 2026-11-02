@@ -149,7 +149,7 @@ button.choice .sub { font-size: 13px; color: var(--muted); font-weight: 400; }
 .tiles .t-subheader { background: var(--c-sub); border-color: var(--c-sub-e); }
 .tiles .t-stamp { background: var(--c-stamp); border-color: var(--c-stamp-e); }
 .tiles .t-desc { background: var(--c-desc); border-color: var(--c-desc-e); }
-.workspace { display: grid; grid-template-columns: 170px 1fr 456px; min-height: 0; }
+.workspace { display: grid; grid-template-columns: 170px 1fr 420px; min-height: 0; }
 .pages { background: #fbfaf8; border-right: 2px solid var(--line); padding: 10px; overflow-y: auto; }
 .pages button.pg { width: 100%; margin-bottom: 6px; text-align: left; }
 .pages button.pg.on { background: var(--accent-soft); border-color: var(--accent); font-weight: 700; }
@@ -199,12 +199,13 @@ button.opt.on { background: var(--accent-soft); border-color: var(--accent); fon
 /* test .htm printing: only the print sheets are printed */
 #print-root { display: none; }
 @media print {
+  body { background: #fff !important; }
   body > *:not(#print-root) { display: none !important; }
-  #print-root { display: block !important; }
-  .print-sheet { page-break-after: always; break-after: page; }
+  #print-root { display: block !important; background: #fff !important; }
+  .print-sheet { page-break-after: always; break-after: page; background: #fff !important; }
   * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
 }
-@media (max-width: 1200px) { .workspace { grid-template-columns: 130px 1fr 396px; } .grid2 { grid-template-columns: 1fr; } }
+@media (max-width: 1200px) { .workspace { grid-template-columns: 130px 1fr 360px; } .grid2 { grid-template-columns: 1fr; } }
 
 /* v2: foldable page sections */
 .panel details > summary { cursor: pointer; list-style: none; display: flex; align-items: center; gap: 8px; }
@@ -1360,7 +1361,6 @@ window.SPD_GUIDE = "# Stamp Page Designer \u2014 Guide\n\nThis guide is the app'
       '<h3 style="margin:14px 0 4px">Saved albums <span class="muted small">(up to 3)</span></h3>' +
       (idx.some(Boolean) ? idx.map((a, i) => a ? '<button class="album-row openrow" data-album="' + i + '"><div class="grow"><div class="name">' + esc(a.name) + '</div><div class="muted small">Slot ' + (i + 1) + " · saved " + esc(a.savedAt) + "</div></div><span>Open</span></button>" : "").join("") :
         '<p class="muted">No saved albums yet. In the editor, use <b>Save album…</b>.</p>') + "</div>" +
-      '<p style="margin-top:24px">Found a bug, or have an idea to improve it? <a href="https://docs.google.com/forms/d/e/1FAIpQLSexWZWPVZ9oNMS76AOtRHlObVBH_NbmVj7rqAhQolKYWT0tEg/viewform" target="_blank" rel="noopener">Tell us here</a> — choose Bugs or Enhancement, and your name and email are optional.</p>' +
       '<div class="foot"><div class="muted small">' + (STANDALONE ? "Your last work, saved albums and saved settings are kept in this browser, on this device." : "Your last work, saved albums and saved settings are kept in: <span class=\"path\">" + esc(S.albumsDir || "the Stamp Page Designer folder in Documents") + "</span>") + "</div>" + (STANDALONE ? "" : '<button id="quit" class="danger">Close the app</button>') + "</div></div>";
     bindSetupForm();
     $("#help").addEventListener("click", openHelp);
@@ -1567,7 +1567,7 @@ window.SPD_GUIDE = "# Stamp Page Designer \u2014 Guide\n\nThis guide is the app'
     S.multi = S.multi || [];
     $("#app").innerHTML =
       '<div class="editor"><div class="topbar">' +
-      '<button id="home">← Home</button><a href="index.html" style="display:inline-flex;align-items:center;min-height:40px;padding:4px 12px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);text-decoration:none;font-size:15px">← Welcome</a><span class="title">Album:</span><input type="text" id="album-name" maxlength="80" value="' + esc(S.project.name) + '" aria-label="Album name">' +
+      '<button id="home">← Home</button><span class="title">Album:</span><input type="text" id="album-name" maxlength="80" value="' + esc(S.project.name) + '" aria-label="Album name">' +
       '<span class="status" id="save-status"></span><span class="grow"></span>' +
       '<button id="undo" title="Undo (Ctrl/Cmd+Z)">↶ Undo</button><button id="redo" title="Redo (Ctrl/Cmd+Shift+Z)">↷ Redo</button>' +
       '<button id="help">? Help</button><button id="save">Save album…</button>' +
