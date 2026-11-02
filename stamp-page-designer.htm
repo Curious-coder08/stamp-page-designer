@@ -1360,6 +1360,7 @@ window.SPD_GUIDE = "# Stamp Page Designer \u2014 Guide\n\nThis guide is the app'
       '<h3 style="margin:14px 0 4px">Saved albums <span class="muted small">(up to 3)</span></h3>' +
       (idx.some(Boolean) ? idx.map((a, i) => a ? '<button class="album-row openrow" data-album="' + i + '"><div class="grow"><div class="name">' + esc(a.name) + '</div><div class="muted small">Slot ' + (i + 1) + " · saved " + esc(a.savedAt) + "</div></div><span>Open</span></button>" : "").join("") :
         '<p class="muted">No saved albums yet. In the editor, use <b>Save album…</b>.</p>') + "</div>" +
+      '<p style="margin-top:24px">Found a bug, or have an idea to improve it? <a href="https://docs.google.com/forms/d/e/1FAIpQLSexWZWPVZ9oNMS76AOtRHlObVBH_NbmVj7rqAhQolKYWT0tEg/viewform" target="_blank" rel="noopener">Tell us here</a> — choose Bugs or Enhancement, and your name and email are optional.</p>' +
       '<div class="foot"><div class="muted small">' + (STANDALONE ? "Your last work, saved albums and saved settings are kept in this browser, on this device." : "Your last work, saved albums and saved settings are kept in: <span class=\"path\">" + esc(S.albumsDir || "the Stamp Page Designer folder in Documents") + "</span>") + "</div>" + (STANDALONE ? "" : '<button id="quit" class="danger">Close the app</button>') + "</div></div>";
     bindSetupForm();
     $("#help").addEventListener("click", openHelp);
