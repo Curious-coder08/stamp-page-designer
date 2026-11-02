@@ -35,6 +35,7 @@
     <a href="#preview">5. Preview, printing, and saving</a>
     <a href="#warnings">6. Warnings, undo, and shortcuts</a>
     <a href="#storage">7. Where your work lives</a>
+    <a href="#before5">8. Albums made before version 5</a>
   </nav>
 
   <h2 id="first">1. The first screen</h2>
@@ -69,12 +70,13 @@
   <h2 id="stamps">3. Stamps, headers, and description boxes</h2>
   <h3>Stamp boxes</h3>
   <ul>
-    <li><strong>Sizes:</strong> Small 25&nbsp;mm, Medium 30&nbsp;mm, Large 35&nbsp;mm, Extra Large 40&nbsp;mm — those are widths; height follows the size you set. Custom stamps can be any rectangle, up to 210&nbsp;×&nbsp;210&nbsp;mm on A3, which fits a plate block. A custom stamp that would go beyond the usable area stops at the edge.</li>
+    <li><strong>Sizes:</strong> Small 25&nbsp;×&nbsp;25&nbsp;mm, Medium 30&nbsp;×&nbsp;30&nbsp;mm, Large 35&nbsp;×&nbsp;35&nbsp;mm, Extra Large 40&nbsp;×&nbsp;40&nbsp;mm. Custom stamps can be any rectangle, up to 210&nbsp;×&nbsp;210&nbsp;mm, which fits a plate block. A stamp that would go beyond the usable area stops at the edge.</li>
     <li><strong>Moving:</strong> drag any item from anywhere on it — the box, its border, or its caption. The pointer shows a hand. Everything snaps to the 2.5&nbsp;mm grid. Arrow keys move 2.5&nbsp;mm at a time.</li>
     <li><strong>Resizing:</strong> Small, Medium, Large, Extra Large and Custom stamps all resize with the mouse in 2.5&nbsp;mm steps, growing and shrinking, with the caption strip moving with the box — a preset size is a starting point, and resizing it turns it into Custom (dragging back to exactly 30&nbsp;×&nbsp;30&nbsp;mm makes it Medium again). Description boxes resize from the bottom-right and top-right handles, both snapping width and height to 2.5&nbsp;mm.</li>
     <li><strong>Captions:</strong> a 5&nbsp;mm strip directly below each stamp, up to 40 characters. Caption font is set per page — Source Sans 3, 9&nbsp;pt by default, maximum 10&nbsp;pt. The caption panel appears only when a stamp is selected, not when a header is selected.</li>
     <li><strong>S-numbers:</strong> each stamp gets an S-number in the order it was added on that page. S-numbers are never reused after a stamp is removed, and they travel with the stamp on drag, copy, undo, and duplicate.</li>
-    <li><strong>Mounts:</strong> Standard mount clearance 2.5&nbsp;mm per side, Strips 5&nbsp;mm per side, measured from the box edge. Spacing between items is shared once, border to border, never double-counted: Narrow 10&nbsp;mm, Normal 20&nbsp;mm, Wide 30&nbsp;mm.</li>
+    <li><strong>Mounts:</strong> Standard mount clearance 2.5&nbsp;mm per side, Strips 5&nbsp;mm per side, measured from the box edge. Spacing between items is shared once, border to border, never double-counted: Narrow 10&nbsp;mm, Normal 20&nbsp;mm, Wide 30&nbsp;mm. Spacing is set separately across (between columns) and down (between rows), and row spacing is measured below a stamp's caption, never between a stamp and its own caption.</li>
+    <li><strong>Resize handles:</strong> the two blue corners appear only on the stamp you have selected — unselected stamps show no handles, so the page stays clean.</li>
     <li><strong>Triangle (trial):</strong> one point-up triangle tile, with Base and Height inputs, a 2&nbsp;mm border, and no mount. Its footprint is taken from its bounding rectangle. It also resizes with the mouse, like the other stamps.</li>
   </ul>
   <h3>Headers and subheaders</h3>
@@ -85,7 +87,8 @@
   </ul>
   <h3>Description boxes</h3>
   <ul>
-    <li>Centred text, width 30–200&nbsp;mm, height 10–200&nbsp;mm. Text size up to 30&nbsp;pt, for larger print — this is separate from caption font, which stays at 9&nbsp;pt.</li>
+    <li>Centred text, width 30–200&nbsp;mm, height 10–200&nbsp;mm. Text size up to 30&nbsp;pt, for larger print — this is separate from caption font, which stays at 9&nbsp;pt. Resize from the bottom-right or top-right blue corners, both snapping to 2.5&nbsp;mm.</li>
+    <li>Description boxes are the exception to the spacing warnings: they may sit tight against a stamp, a heading, or the edge of the usable area with no warning — only a real overlap is reported.</li>
     <li>Plain click on one item inside a multi-selection selects only that item, like other tools. Dragging still moves the whole group. Clicking empty page space clears the selection. Shift-click and marquee drag also select multiple items.</li>
   </ul>
 
@@ -123,9 +126,15 @@
     <p>Continue your last work is a separate, automatically kept slot, distinct from the three named albums. It is overwritten as you work.</p>
   </div>
 
+  <h2 id="before5">8. Albums made before version 5</h2>
+  <p>Albums made before version 5 open exactly as you left them — your last work, your saved albums, and your saved settings. Nothing is moved, resized, or rearranged when an album opens. That is on purpose: the app never changes your layout behind your back.</p>
+  <p>What is different: the dashed border around each stamp now sits a little further out. With a Standard mount it used to be 2&nbsp;mm from the stamp and is now 2.5&nbsp;mm; with Strips it used to be 4&nbsp;mm and is now 5&nbsp;mm. So every bordered stamp takes up slightly more room — 1&nbsp;mm more across and down with Standard, 2&nbsp;mm more with Strips. The stamp itself, its caption, and its place on the page are unchanged.</p>
+  <p>Why you may see new warnings: if two stamps were exactly one spacing apart before (say exactly 20&nbsp;mm, border to border), their slightly larger borders now bring them 1–2&nbsp;mm closer than that, so the app outlines them in red. A stamp that sat right against the edge of the usable area may now stick out by up to 1&nbsp;mm. These warnings are correct, not a fault. Press <strong>Auto-align</strong> to even out the spaces again, or drag or nudge the stamps one square apart. If you would rather keep the layout as it is, you can leave the warnings — but a stamp that sticks out of the usable area is left out of the PDF until you move it back inside.</p>
+
   <footer>
     Stamp Page Designer — How to, version 5.0.0.
     <br><a href="index.html">← Back to Welcome</a> · <a href="stamp-page-designer.htm">Open the Tool →</a>
+    <br>Found a bug, or have an idea to improve it? <a href="https://docs.google.com/forms/d/e/1FAIpQLSexWZWPVZ9oNMS76AOtRHlObVBH_NbmVj7rqAhQolKYWT0tEg/viewform">Tell us here</a> — choose Bugs or Enhancement, and your name and email are optional.
   </footer>
 </main>
 </body>
