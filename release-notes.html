@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stamp Page Designer — Release Notes</title>
+<style>
+  :root{--green:#2f5d3a;--ink:#222;--muted:#5a5a5a;--line:#ddd;--bg:#f7f5f0}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
+  main{max-width:860px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:1.9rem;line-height:1.2}
+  h2{font-size:1.35rem;margin-top:32px;border-bottom:2px solid var(--line);padding-bottom:6px}
+  p,li{font-size:1.02rem}
+  a{color:var(--green)}
+  .back{font-size:1rem}
+  footer{margin-top:36px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);padding-top:16px}
+</style>
+</head>
+<body>
+<main>
+  <p class="back"><a href="index.html">← Back to Welcome</a> · <a href="stamp-page-designer.htm">Open the Tool →</a></p>
+  <h1>Release Notes</h1>
+  <p>A running list, newest first. Entries are added, never removed.</p>
+
+  <h2>Release 6.0.0 — 2 November 2026</h2>
+  <ul>
+    <li>Grid: visible lines stay at 2.5 mm, moving and resizing snap to 1.25 mm, with faint 1.25 mm lines at 100% zoom and above only (screen only, never in Preview or PDF).</li>
+    <li>Arrow keys: plain arrow jumps to the next visible 2.5 mm line, Shift + arrow moves 1.25 mm, and arrow keys never snap to neighbours.</li>
+    <li>New spacing option Tight at 5 mm, listed in numeric order Tight 5, Narrow 10, Normal 20, Wide 30, and Auto-align never switches to Tight by itself.</li>
+    <li>Auto-align keeps every row on the grid: when the leftover cannot split evenly, the extra 2.5 mm goes to the right, and dividers and corner pictures are left where you put them.</li>
+    <li>Page borders: Small (about 0.75×), Medium (today's size), and Large (about 1.4×) sizes, with 15 new motifs and 9 new corners added (23 patterns and 17 corners in total).</li>
+    <li>Page borders in Dense margins: if Large does not fit outside the line, it either shrinks to the largest size that fits or moves onto the line, and the panel states which.</li>
+    <li>Page border None option: default unchanged, existing albums keep their border unless None is picked, and page numbers sit just under the usable area when None is on.</li>
+    <li>10 new fonts, taking the total from 8 to 18, available in every text control including captions, grouped and shown in their own typeface, with Bold and Italic greyed out where a font does not have them.</li>
+    <li>Snap to neighbours while dragging: edges and centres within about 1 mm pull onto a neighbour's line or the page centre, with a pink alignment line on screen only, and snapping to exactly the chosen spacing with the blue gap measurement shown.</li>
+    <li>Genuine overlaps go back to fix, not to print: a stamp overlapping the page border or another stamp is not printed, and you are returned to the editor to fix it; closeness alone does not block printing.</li>
+    <li>Saved work from 5.1.0 opens unchanged, with today's border size reading as Medium, and nothing auto-fixed on opening.</li>
+    <li>Corner pictures (Art tile): 23 pictures to personalise a page — 9 philatelic, 6 postal, 8 heraldic — in the page-border colour, with supporters and a scroll ribbon with motto on heraldic shields only.</li>
+    <li>Row dividers (Divider tile): horizontal lines, full usable width and centred by default, in 6 styles and 3 weights, moving up and down only, with an ornament option for the short centred line style.</li>
+    <li>Corner pictures and row dividers warn only on overlap, never block printing, and Auto-align leaves them where you put them.</li>
+  </ul>
+
+  <footer>
+    Stamp Page Designer — Release Notes.
+    <br><a href="index.html">← Back to Welcome</a> · <a href="stamp-page-designer.htm">Open the Tool →</a>
+  </footer>
+</main>
+</body>
+</html>
