@@ -24,7 +24,7 @@
 <main>
   <p class="back"><a href="index.html">← Back to Welcome</a> · <a href="stamp-page-designer.htm">Open the Tool →</a></p>
   <h1>How to use Stamp Page Designer</h1>
-  <p>Version 4.0.2. This guide follows the tool in the order you meet it: first screen, then the editor, then preview and printing. It is deliberately short — the tool is meant to be used, not studied.</p>
+  <p>Version 5.0.0. This guide follows the tool in the order you meet it: first screen, then the editor, then preview and printing. It is deliberately short — the tool is meant to be used, not studied.</p>
 
   <nav>
     <strong>Contents</strong>
@@ -58,7 +58,7 @@
   <h3>The view bar</h3>
   <ul>
     <li><strong>Add</strong> — add a stamp, header, subheader, description box, or triangle to the page.</li>
-    <li><strong>Auto-align</strong> — tidies the page onto the 5&nbsp;mm grid, respecting your spacing. If a page is too full, it falls back to Dense-style packing rather than failing.</li>
+    <li><strong>Auto-align</strong> — tidies the page onto the 2.5&nbsp;mm grid, respecting your spacing. If a page is too full, it falls back to Dense-style packing rather than failing.</li>
     <li><strong>Select All</strong> — selects everything on the current page.</li>
     <li><strong>Copy / Paste</strong> — copies the selected items. Paste puts them in the first free space, and pans into view if they would land off-screen. Copy is session-only: it does not survive closing and reopening the tool.</li>
     <li><strong>Start fresh</strong> — as above, from inside the editor.</li>
@@ -70,12 +70,12 @@
   <h3>Stamp boxes</h3>
   <ul>
     <li><strong>Sizes:</strong> Small 25&nbsp;mm, Medium 30&nbsp;mm, Large 35&nbsp;mm, Extra Large 40&nbsp;mm — those are widths; height follows the size you set. Custom stamps can be any rectangle, up to 210&nbsp;×&nbsp;210&nbsp;mm on A3, which fits a plate block. A custom stamp that would go beyond the usable area stops at the edge.</li>
-    <li><strong>Moving:</strong> drag any item from anywhere on it — the box, its border, or its caption. The pointer shows a hand. Everything snaps to the 5&nbsp;mm grid. Arrow keys move 5&nbsp;mm at a time.</li>
-    <li><strong>Resizing:</strong> custom stamps resize with the mouse in 5&nbsp;mm steps, growing and shrinking, with the caption strip moving with the box. Description boxes resize from the bottom-right and top-right handles; the top-right handle snaps width and height to 5&nbsp;mm. The bottom-right handle is free-form.</li>
+    <li><strong>Moving:</strong> drag any item from anywhere on it — the box, its border, or its caption. The pointer shows a hand. Everything snaps to the 2.5&nbsp;mm grid. Arrow keys move 2.5&nbsp;mm at a time.</li>
+    <li><strong>Resizing:</strong> Small, Medium, Large, Extra Large and Custom stamps all resize with the mouse in 2.5&nbsp;mm steps, growing and shrinking, with the caption strip moving with the box — a preset size is a starting point, and resizing it turns it into Custom (dragging back to exactly 30&nbsp;×&nbsp;30&nbsp;mm makes it Medium again). Description boxes resize from the bottom-right and top-right handles, both snapping width and height to 2.5&nbsp;mm.</li>
     <li><strong>Captions:</strong> a 5&nbsp;mm strip directly below each stamp, up to 40 characters. Caption font is set per page — Source Sans 3, 9&nbsp;pt by default, maximum 10&nbsp;pt. The caption panel appears only when a stamp is selected, not when a header is selected.</li>
     <li><strong>S-numbers:</strong> each stamp gets an S-number in the order it was added on that page. S-numbers are never reused after a stamp is removed, and they travel with the stamp on drag, copy, undo, and duplicate.</li>
-    <li><strong>Mounts:</strong> Standard mount clearance 2&nbsp;mm per side, Strips 4&nbsp;mm per side, measured from the box edge. Spacing between items is shared once, border to border, never double-counted: Narrow 10&nbsp;mm, Normal 20&nbsp;mm, Wide 30&nbsp;mm.</li>
-    <li><strong>Triangle (trial):</strong> one point-up triangle tile, with Base and Height inputs, a 2&nbsp;mm border, and no mount. Its footprint is taken from its bounding rectangle.</li>
+    <li><strong>Mounts:</strong> Standard mount clearance 2.5&nbsp;mm per side, Strips 5&nbsp;mm per side, measured from the box edge. Spacing between items is shared once, border to border, never double-counted: Narrow 10&nbsp;mm, Normal 20&nbsp;mm, Wide 30&nbsp;mm.</li>
+    <li><strong>Triangle (trial):</strong> one point-up triangle tile, with Base and Height inputs, a 2&nbsp;mm border, and no mount. Its footprint is taken from its bounding rectangle. It also resizes with the mouse, like the other stamps.</li>
   </ul>
   <h3>Headers and subheaders</h3>
   <ul>
@@ -92,8 +92,8 @@
   <h2 id="pagesettings">4. Page Settings</h2>
   <p>Page Settings is a permanent panel under the selected-item panel. It is album-wide, and its open/closed state is remembered.</p>
   <ul>
-    <li><strong>Paper:</strong> Letter, A4, Legal, A3 — portrait only. No landscape.</li>
-    <li><strong>Margins:</strong> Classic (about 1 inch at the sides, trimmed so the usable height divides by 5&nbsp;mm) or Dense (wider usable area). With punch-hole on, the left margin grows by ½ inch, punch-hole side only.</li>
+    <li><strong>Paper:</strong> Letter, A4, Legal, A3, plus Scott National &amp; Specialty, Scott International, Scott Minuteman, Minkus, Davo, H. E. Harris, Stanley Gibbons, Palo, Lighthouse, White Ace, Mystic Heirloom and Schaubek — portrait only. No landscape.</li>
+    <li><strong>Margins:</strong> Classic (about 1 inch at the sides, trimmed so the usable height divides by 5&nbsp;mm) or Dense (wider usable area). With punch-hole on, the left margin grows by ½ inch, punch-hole side only, on every format.</li>
     <li><strong>Page border:</strong> 8 patterns, 8 corners, 8 colours each, default grey / hyphens / square. Decorations always sit outside the usable area. Page numbers, when on, sit just under the lower border, centred on the border.</li>
     <li><strong>Page numbers:</strong> off by default — you must turn them on. When on, the starting number defaults to 1 and can be changed. Numbers follow page order and update when you add, remove, or reorder pages. They print on the PDF.</li>
     <li><strong>Saved settings:</strong> save the current combination from Page Settings. Applying a saved combination is one action, and one Undo reverts it. Settings and albums are separate — saving one never overwrites the other.</li>
@@ -124,7 +124,7 @@
   </div>
 
   <footer>
-    Stamp Page Designer — How to, version 4.0.2.
+    Stamp Page Designer — How to, version 5.0.0.
     <br><a href="index.html">← Back to Welcome</a> · <a href="stamp-page-designer.htm">Open the Tool →</a>
   </footer>
 </main>
