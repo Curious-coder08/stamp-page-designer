@@ -1566,7 +1566,7 @@ window.SPD_GUIDE = "# Stamp Page Designer \u2014 Guide\n\nThis guide is the app'
     S.multi = S.multi || [];
     $("#app").innerHTML =
       '<div class="editor"><div class="topbar">' +
-      '<button id="home">← Home</button><span class="title">Album:</span><input type="text" id="album-name" maxlength="80" value="' + esc(S.project.name) + '" aria-label="Album name">' +
+      '<button id="home">← Home</button><a href="index.html" style="display:inline-flex;align-items:center;min-height:40px;padding:4px 12px;border:2px solid var(--line);border-radius:10px;background:#fff;color:var(--ink);text-decoration:none;font-size:15px">← Welcome</a><span class="title">Album:</span><input type="text" id="album-name" maxlength="80" value="' + esc(S.project.name) + '" aria-label="Album name">' +
       '<span class="status" id="save-status"></span><span class="grow"></span>' +
       '<button id="undo" title="Undo (Ctrl/Cmd+Z)">↶ Undo</button><button id="redo" title="Redo (Ctrl/Cmd+Shift+Z)">↷ Redo</button>' +
       '<button id="help">? Help</button><button id="save">Save album…</button>' +
