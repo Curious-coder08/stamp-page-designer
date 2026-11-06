@@ -1,0 +1,38 @@
+name: Publish 7.0.0 tool
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Rename tool file and add SEO head tags
+        run: |
+          python3 - <<'PY'
+          import pathlib
+          src = pathlib.Path("stamp-page-designer-7.0.0_1.htm")
+          dst = pathlib.Path("stamp-page-designer.htm")
+          text = src.read_text(encoding="utf-8")
+          desc = "Create and print true-size custom stamp album pages in your browser for free. Supports Scott, Minkus, Davo, and standard paper sizes. No installation required."
+          old_title = "<title>Stamp Page Designer</title>"
+          assert old_title in text, "title not found"
+          assert 'name="description"' not in text, "description already present"
+          text = text.replace(old_title, "<title>Stamp Page Designer | Free Custom Stamp Album Page Creator</title>", 1)
+          viewport = '<meta name="viewport" content="width=device-width, initial-scale=1">'
+          assert viewport in text, "viewport not found"
+          seo = viewport + "\n" + '<meta name="description" content="' + desc + '">' + "\n" + '<script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Stamp Page Designer","description":"' + desc + '","applicationCategory":"DesignApplication","operatingSystem":"Web browser","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>'
+          text = text.replace(viewport, seo, 1)
+          dst.write_text(text, encoding="utf-8")
+          src.unlink()
+          print("renamed and SEO added")
+          PY
+      - name: Commit and push
+        run: |
+          git config user.name "Curious-coder08"
+          git config user.email "curious-coder08@users.noreply.github.com"
+          git add -A
+          git status --short
+          git commit -m "Restore Welcome page and publish 7.0.0 tool as stamp-page-designer.htm"
+          git push
