@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stamp Page Designer — Share Your Album Page</title>
+<style>
+  :root{--green:#2f5d3a;--ink:#222;--muted:#5a5a5a;--line:#ddd;--bg:#f7f5f0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  main{max-width:860px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:2rem;line-height:1.2;margin:0 0 8px}
+  .sub{font-size:1.15rem;color:#333;margin:0 0 20px}
+  p{font-size:1.05rem}
+  form{background:#fff;border:1px solid #bbb;border-radius:4px;padding:24px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  label{display:block;font-weight:600;margin:16px 0 6px}
+  label:first-child{margin-top:0}
+  input[type=text],input[type=file]{width:100%;font:inherit;padding:10px;border:1px solid #bbb;border-radius:4px;background:#fff}
+  .hint{color:var(--muted);font-size:.95rem;margin:4px 0 0}
+  button{font:inherit;background:var(--green);color:#fff;border:0;border-radius:4px;padding:12px 22px;margin-top:20px;cursor:pointer}
+  button:disabled{opacity:.6;cursor:wait}
+  progress{width:100%;height:18px;margin-top:16px}
+  #status{margin-top:16px;font-size:1.05rem}
+  #status.ok{color:var(--green)}
+  #status.err{color:#a00}
+  footer{margin-top:32px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);padding-top:16px}
+  a{color:var(--green)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Share Your Album Page</h1>
+  <p class="sub">Made a page with Stamp Page Designer that you are proud of? Send it in.</p>
+
+  <p>Your PDF is stored privately and is <strong>not</strong> published automatically. Deb checks every submission himself and will get in touch if it is a fit for the site.</p>
+
+  <form id="submit-form">
+    <label for="title">Page title</label>
+    <input type="text" id="title" name="title" maxlength="200" required placeholder="e.g. Canada 1851 — The Pence Issues">
+    <p class="hint">Give your page a short title.</p>
+
+    <label for="sender">Your name (optional)</label>
+    <input type="text" id="sender" name="sender" maxlength="200" placeholder="So Deb knows who sent it">
+
+    <label for="pdf">Your page (PDF only, up to 200 MB)</label>
+    <input type="file" id="pdf" name="pdf" accept="application/pdf" required>
+    <p class="hint">Export your page as a PDF from the tool first, then attach it here. Large files take a while to upload — the progress bar below shows how it is going.</p>
+
+    <button type="submit" id="submit-btn">Send my page</button>
+    <progress id="upload-progress" max="100" value="0" hidden></progress>
+    <p id="status" role="status"></p>
+  </form>
+
+  <p><a href="index.html">← Welcome</a> &nbsp;·&nbsp; <a href="samples.html">Sample Pages</a></p>
+
+  <footer>
+    A hobby project, made for collectors, by a collector. Free to use.
+    <br>Tool version on this site: Stamp Page Designer 8.0.0.
+  </footer>
+</main>
+<script>
+  // DEPLOY NOTE: paste the Worker's public URL here after deploying it.
+  // It looks like: https://stamp-page-submissions.<your-subdomain>.workers.dev
+  // The form does nothing until this is set to the real URL.
+  const WORKER_URL = "https://stamp-page-submissions.debajyoti-dash.workers.dev";
+  const MAX_BYTES = 200 * 1024 * 1024; // 200 MB
+
+  const form = document.getElementById("submit-form");
+  const status = document.getElementById("status");
+  const btn = document.getElementById("submit-btn");
+  const progress = document.getElementById("upload-progress");
+
+  function fail(msg) {
+    status.className = "err";
+    status.textContent = msg;
+    btn.disabled = false;
+    btn.textContent = "Send my page";
+    progress.hidden = true;
+  }
+
+  // Direct PUT to the presigned URL, with a progress bar (fetch has no
+  // upload progress, so this step uses XMLHttpRequest).
+  function putFile(url, file) {
+    return new Promise((resolve, reject) => {
+      const xhr = new XMLHttpRequest();
+      xhr.open("PUT", url);
+      xhr.setRequestHeader("Content-Type", "application/pdf");
+      xhr.upload.onprogress = (e) => {
+        if (e.lengthComputable) {
+          progress.value = Math.round((e.loaded / e.total) * 100);
+          status.textContent = "Uploading… " + progress.value + "%";
+        }
+      };
+      xhr.onload = () => {
+        if (xhr.status >= 200 && xhr.status < 300) resolve();
+        else reject(new Error("Storage returned " + xhr.status + "."));
+      };
+      xhr.onerror = () => reject(new Error("Could not reach storage."));
+      xhr.send(file);
+    });
+  }
+
+  form.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    status.className = "";
+    status.textContent = "";
+    progress.hidden = true;
+    progress.value = 0;
+    const file = document.getElementById("pdf").files[0];
+    const title = document.getElementById("title").value.trim();
+    const sender = document.getElementById("sender").value.trim();
+    if (!title) return fail("Please give your page a title.");
+    if (!file) return fail("Please attach a PDF file.");
+    if (file.type && file.type !== "application/pdf" && !/\.pdf$/i.test(file.name)) {
+      return fail("Only PDF files are accepted.");
+    }
+    if (file.size === 0 || file.size > MAX_BYTES) {
+      return fail("That PDF is over the 200 MB limit.");
+    }
+    btn.disabled = true;
+    btn.textContent = "Sending…";
+    try {
+      // Step 1: ask the Worker for a signed upload link.
+      status.textContent = "Getting an upload link…";
+      const ask = await fetch(WORKER_URL + "/request-upload", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          title, sender,
+          fileName: file.name, fileSize: file.size, fileType: file.type,
+        }),
+      });
+      const askData = await ask.json().catch(() => ({}));
+      if (!ask.ok || !askData.ok) {
+        return fail(askData.error || "Something went wrong. Please try again.");
+      }
+      // Step 2: upload the PDF straight to storage.
+      progress.hidden = false;
+      await putFile(askData.uploadUrl, file);
+      // Step 3: tell the Worker the upload finished, so it can verify
+      // the file and email Deb.
+      status.className = "";
+      status.textContent = "Finishing up…";
+      progress.hidden = true;
+      const done = await fetch(WORKER_URL + "/confirm", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ key: askData.key, title, sender }),
+      });
+      const doneData = await done.json().catch(() => ({}));
+      if (!done.ok || !doneData.ok) {
+        return fail(doneData.error || "Upload finished but could not be confirmed. Please try again.");
+      }
+      status.className = "ok";
+      status.textContent = "Thanks — your page was received. Deb will check it.";
+      form.reset();
+    } catch (err) {
+      fail(err && err.message ? err.message : "Something went wrong. Please try again.");
+    } finally {
+      btn.disabled = false;
+      btn.textContent = "Send my page";
+    }
+  });
+</script>
+</body>
+</html>
