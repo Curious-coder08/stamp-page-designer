@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Stamp Page Designer — Community Pages</title>
+<meta name="description" content="Album pages shared by other collectors, chosen by Deb. Free to view and print at 100%.">
+<style>
+  :root{--green:#2f5d3a;--ink:#222;--muted:#5a5a5a;--line:#ddd;--bg:#f7f5f0}
+  *{box-sizing:border-box}
+  body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.55}
+  main{max-width:860px;margin:0 auto;padding:32px 20px 48px}
+  h1{font-size:2rem;line-height:1.2;margin:0 0 8px}
+  .sub{font-size:1.15rem;color:#333;margin:0 0 20px}
+  p{font-size:1.05rem}
+  .card{background:#fff;border:1px solid #bbb;border-radius:4px;padding:18px 20px;margin:0 0 14px;box-shadow:0 1px 3px rgba(0,0,0,.12)}
+  .card h2{font-size:1.25rem;margin:0 0 4px}
+  .card .meta{color:var(--muted);font-size:.95rem;margin:0 0 8px}
+  .card p{margin:0}
+  footer{margin-top:32px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);padding-top:16px}
+  a{color:var(--green)}
+</style>
+</head>
+<body>
+<main>
+  <h1>Community Pages</h1>
+  <p class="sub">Album pages shared by other collectors, chosen by Deb.</p>
+
+  <p>Every page here was made with Stamp Page Designer and checked by Deb before it was listed. Print at 100% — never “Fit to page”.</p>
+
+  <div id="pages"><p>Loading…</p></div>
+
+  <p id="empty" hidden>No community pages yet. Made a page you are proud of? <a href="submit.html">Share yours</a> — Deb checks every submission himself.</p>
+
+  <p><a href="index.html">← Welcome</a> &nbsp;·&nbsp; <a href="submit.html">Share Your Album Page</a> &nbsp;·&nbsp; <a href="samples.html">Sample Pages</a></p>
+
+  <footer>
+    A hobby project, made for collectors, by a collector. Free to use.
+    <br>Tool version on this site: Stamp Page Designer 8.0.0.
+  </footer>
+</main>
+<script>
+  // The list of approved pages lives in community.json (same folder).
+  // Only pages Deb has approved are in that file, and the Worker only
+  // serves a PDF whose key is listed there.
+  const WORKER_URL = "https://stamp-page-submissions.debajyoti-dash.workers.dev";
+
+  function humanSize(bytes) {
+    if (bytes < 1024) return bytes + " B";
+    if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + " KB";
+    return (bytes / (1024 * 1024)).toFixed(1) + " MB";
+  }
+
+  function esc(s) {
+    return String(s == null ? "" : s)
+      .replace(/&/g, "&amp;").replace(/</g, "&lt;").replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;").replace(/'/g, "&#39;");
+  }
+
+  fetch("community.json")
+    .then((r) => r.json())
+    .then((data) => {
+      const pages = (data && data.pages) || [];
+      const box = document.getElementById("pages");
+      if (!pages.length) {
+        box.innerHTML = "";
+        document.getElementById("empty").hidden = false;
+        return;
+      }
+      box.innerHTML = pages.map((p) => {
+        const bits = [];
+        if (p.sender) bits.push("Shared by " + esc(p.sender));
+        if (p.date) bits.push(esc(p.date));
+        if (p.size) bits.push(humanSize(p.size));
+        return '<article class="card">'
+          + "<h2>" + esc(p.title) + "</h2>"
+          + (bits.length ? '<p class="meta">' + bits.join(" · ") + "</p>" : "")
+          + '<p><a href="' + WORKER_URL + "/view?key=" + encodeURIComponent(p.key)
+          + '" target="_blank" rel="noopener">View PDF</a></p>'
+          + "</article>";
+      }).join("");
+    })
+    .catch(() => {
+      document.getElementById("pages").innerHTML =
+        "<p>Could not load the list right now. Please try again later.</p>";
+    });
+</script>
+</body>
+</html>
