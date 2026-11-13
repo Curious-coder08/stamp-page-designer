@@ -1,505 +1,358 @@
 WEBVTT
 
-1
-00:00:00.349 --> 00:00:03.566
+00:00:00.349 --> 00:00:03.605
 Welcome to Stamp Page Designer, version eight.
 
-2
-00:00:03.616 --> 00:00:07.472
+00:00:03.655 --> 00:00:07.557
 It's a free tool for making your own stamp album pages.
 
-3
-00:00:07.522 --> 00:00:16.632
-You place every stamp, heading and story box yourself, and every stamp frame prints at its true size, so your stamps fit exactly.
+00:00:07.607 --> 00:00:16.682
+You place every stamp, title and story box yourself, and every stamp frame prints at its true size, so your stamps fit exactly.
 
-4
-00:00:17.950 --> 00:00:21.163
+00:00:17.983 --> 00:00:21.147
 To start a new album, choose the margins first.
 
-5
-00:00:21.213 --> 00:00:28.108
+00:00:21.197 --> 00:00:27.987
 Classic margins are one inch at the sides, and about one and a quarter inches at the top and bottom.
 
-6
-00:00:28.158 --> 00:00:32.830
+00:00:28.037 --> 00:00:32.638
 Dense margins are half an inch all round, which gives you more room.
 
-7
-00:00:32.880 --> 00:00:37.275
+00:00:32.688 --> 00:00:37.015
 If your pages go into a ring binder, tick the punch-hole margin.
 
-8
-00:00:37.325 --> 00:00:39.567
-It adds half an inch on the left.
-
-9
-00:00:40.883 --> 00:00:42.390
+00:00:38.316 --> 00:00:39.830
 Next, pick the paper.
 
-10
-00:00:42.440 --> 00:00:50.845
-There is Letter, A4, Legal and A3, and twelve album page formats, such as Scott, Minkus, Davo and Stanley Gibbons.
+00:00:39.880 --> 00:00:47.871
+There is Letter, A4, Legal and A3, and twelve album page formats, such as Scott, Minkus and Stanley Gibbons.
 
-11
-00:00:50.895 --> 00:00:56.259
+00:00:47.921 --> 00:00:53.306
 Then choose the spacing between items, across the page and down the page.
 
-12
-00:00:56.309 --> 00:01:01.376
-It goes from Tight, five millimetres, up to Wide, thirty millimetres.
+00:00:53.356 --> 00:00:58.294
+The line under the paper shows exactly how big your usable area is.
 
-13
-00:01:01.426 --> 00:01:08.199
-The box below shows exactly how big your usable area is, and how many grid squares it holds.
+00:00:59.616 --> 00:01:03.502
+New in version eight, choose a look for the whole album.
 
-14
-00:01:09.516 --> 00:01:14.743
-Give the album a name, choose how many pages to start with, and press Start designing.
+00:01:03.552 --> 00:01:07.298
+Standard, Classic, Contemporary, Modern or Minimalist.
 
-15
-00:01:16.049 --> 00:01:17.307
+00:01:07.348 --> 00:01:13.132
+A look sets the lettering, the title, the page border and the lines, on every page.
+
+00:01:13.182 --> 00:01:14.819
+You can change it later.
+
+00:01:16.149 --> 00:01:17.928
+Then choose the first page.
+
+00:01:17.978 --> 00:01:20.909
+Leave it blank, or pick a ready-made layout.
+
+00:01:20.959 --> 00:01:24.228
+Give the album a name, and press Start designing.
+
+00:01:25.549 --> 00:01:26.889
 This is the editor.
 
-16
-00:01:17.357 --> 00:01:24.326
-Along the top, you'll find the album name, Undo and Redo, Help, Save album, Download album, and Print.
+00:01:26.939 --> 00:01:36.250
+The navy bar at the top has Home, your album's name, Undo and Redo, Help, the keyboard shortcuts, and the size of the lettering.
 
-17
-00:01:24.376 --> 00:01:27.078
-Below that is a row of coloured buttons.
+00:01:36.300 --> 00:01:40.639
+On the right are just two buttons: Save album, and Save PDF.
 
-18
-00:01:27.128 --> 00:01:30.450
-There's one for everything you can add to a page.
+00:01:41.949 --> 00:01:45.154
+Below it is the Add bar, with eight buttons.
 
-19
-00:01:30.500 --> 00:01:34.717
-Hover over any button, and a short tip tells you what it does.
+00:01:45.204 --> 00:01:49.445
+Stamp, Title, Text, Picture, Frame, Line, Margin and Page.
 
-20
-00:01:36.049 --> 00:01:38.280
-Your pages are listed on the left.
+00:01:49.495 --> 00:01:52.921
+A button with a small arrow opens a short list.
 
-21
-00:01:38.330 --> 00:01:40.493
+00:01:52.971 --> 00:01:57.951
+The Stamp list has every size, and the last size you used is marked.
+
+00:01:58.001 --> 00:02:01.724
+Picture, Frame, Line and Margin work straight away.
+
+00:02:03.049 --> 00:02:04.877
+Your pages are on the left.
+
+00:02:04.927 --> 00:02:07.172
 The page itself is in the middle.
 
-22
-00:01:40.543 --> 00:01:46.127
-And the panel on the right always shows the settings for whatever you have selected.
+00:02:07.222 --> 00:02:12.387
+And the panel on the right shows the settings for whatever you've selected.
 
-23
-00:01:46.177 --> 00:01:49.682
-When nothing is selected, it shows the page settings.
+00:02:12.437 --> 00:02:17.810
+Next to Settings is a new FAQ tab, with short answers to the common questions.
 
-24
-00:01:50.983 --> 00:01:53.159
-Let's start with a Page Header.
+00:02:17.860 --> 00:02:22.886
+At the foot of the pages, a small line tells you your work is being kept.
 
-25
-00:01:53.209 --> 00:01:54.308
-Type your title.
+00:02:24.216 --> 00:02:26.950
+Open the Title list, and add a Title.
 
-26
-00:01:54.358 --> 00:01:55.529
+00:02:27.000 --> 00:02:28.078
+Type your text.
+
+00:02:28.128 --> 00:02:29.357
 Then pick a font.
 
-27
-00:01:55.579 --> 00:02:04.936
-There are eighteen built in, and each one is shown in its own lettering, from formal scripts and handwriting to classic book faces.
+00:02:29.407 --> 00:02:34.096
+There are eighteen, and each one is shown in its own lettering.
 
-28
-00:02:04.986 --> 00:02:08.240
+00:02:34.146 --> 00:02:37.557
 Then set the size, and make it bold or italic.
 
-29
-00:02:09.549 --> 00:02:11.935
-Choose a height for the header box.
+00:02:38.883 --> 00:02:43.203
+Choose a height for the title box, from two to four centimetres.
 
-30
-00:02:11.985 --> 00:02:18.269
-It can be as low as two centimetres, which is new in version eight, up to four centimetres.
-
-31
-00:02:18.319 --> 00:02:22.445
+00:02:43.253 --> 00:02:47.299
 Fit the width to the text, and give it a border if you like.
 
-32
-00:02:22.495 --> 00:02:31.283
-Once the box is narrower than the page, you can place it in one of five positions: far left, left, centre, right, or far right.
+00:02:47.349 --> 00:02:53.649
+Once the box is narrower than the page, place it far left, left, centre, right, or far right.
 
-33
-00:02:32.616 --> 00:02:33.722
+00:02:54.983 --> 00:02:56.035
 Now the stamps.
 
-34
-00:02:33.772 --> 00:02:39.961
-Small, Medium, Large and Extra Large each add a stamp frame of exactly that size.
+00:02:56.085 --> 00:03:00.295
+The Stamp list holds Small, Medium, Large and Extra Large.
 
-35
-00:02:40.011 --> 00:02:43.812
-Each one lands in the first free spot on the page.
+00:03:00.345 --> 00:03:06.245
+Each adds a stamp frame of exactly that size, in the first free spot on the page.
 
-36
-00:02:45.116 --> 00:02:48.518
-Every stamp gets a number: S1, S2, S3, and so on.
+00:03:06.295 --> 00:03:11.534
+The button remembers the last size you used, so the next one is quicker.
 
-37
-00:02:48.568 --> 00:02:53.027
-The number stays with the stamp, and it helps you find it later.
+00:03:12.849 --> 00:03:17.031
+When you select a stamp, a small toolbar appears right above it.
 
-38
-00:02:53.077 --> 00:02:55.845
-It shows on screen, but it never prints.
+00:03:17.081 --> 00:03:21.263
+Change its size, add a caption, copy it, frame it, or delete it.
 
-39
-00:02:55.895 --> 00:03:04.581
-When you have twenty stamps on a page, these numbers make it easy to talk about one of them, or to find it in the inventory.
+00:03:21.313 --> 00:03:26.023
+And new in version eight, you can type the caption straight on the page.
 
-40
-00:03:05.883 --> 00:03:10.659
-Select a stamp to type a caption under it, such as a catalogue number.
+00:03:26.073 --> 00:03:30.585
+Press Caption, or double-click the stamp, then type, and press Enter.
 
-41
-00:03:10.709 --> 00:03:14.382
-Tick Multiple lines, and you can use up to four lines.
+00:03:31.916 --> 00:03:35.730
+The panel on the right shows the size and caption first.
 
-42
-00:03:14.432 --> 00:03:22.863
-You can also type a short note inside the frame, like the value of the stamp, and tick Print it if you want it on the page.
+00:03:35.780 --> 00:03:37.869
+The rest is under More options.
 
-43
-00:03:22.913 --> 00:03:25.483
-The frame line can be dashed or solid.
+00:03:37.919 --> 00:03:42.906
+There you can type a short note inside the frame, like the stamp's value.
 
-44
-00:03:25.533 --> 00:03:31.964
-And new in version eight, it can also be perforated, with little teeth like a real stamp edge.
+00:03:42.956 --> 00:03:49.599
+And the frame line can be dashed, solid, or perforated, with little teeth like a real stamp edge.
 
-45
-00:03:32.014 --> 00:03:34.791
-Strips gives a mount with a wider border.
-
-46
-00:03:36.116 --> 00:03:38.955
+00:03:50.916 --> 00:03:53.769
 Every stamp can be resized with the mouse.
 
-47
-00:03:39.005 --> 00:03:41.981
+00:03:53.819 --> 00:03:56.810
 Select it, and drag one of its blue corners.
 
-48
-00:03:42.031 --> 00:03:48.997
-It grows and shrinks in steps of one and a quarter millimetres, up to two hundred and ten millimetres.
+00:03:56.860 --> 00:04:03.444
+It grows in steps of one and a quarter millimetres, and it never goes past the edge of the page.
 
-49
-00:03:49.047 --> 00:03:51.748
-It never goes past the edge of the page.
+00:04:03.494 --> 00:04:05.517
+If you go too far, press Undo.
 
-50
-00:03:51.798 --> 00:03:54.155
-If you go too far, just press Undo.
+00:04:06.849 --> 00:04:11.600
+The Story box, in the Text list, is for your story about a stamp.
 
-51
-00:03:55.483 --> 00:03:58.950
-The description box is for your story about a stamp.
+00:04:11.650 --> 00:04:14.112
+Type your text, and choose a size.
 
-52
-00:03:59.000 --> 00:04:04.834
-Type your text, choose a size up to thirty points, and resize the box from its corners.
+00:04:14.162 --> 00:04:21.424
+New in version eight, a story box can have a pale fill behind it: grey, cream, blue, green or rose.
 
-53
-00:04:06.150 --> 00:04:11.737
-Clip Art opens a chooser first, so nothing lands on the page until you pick something.
+00:04:22.750 --> 00:04:28.266
+Picture opens a chooser first, so nothing lands on the page until you pick something.
 
-54
-00:04:11.787 --> 00:04:21.374
-There are twenty-three line drawings in any colour, twenty classic stamp drawings, and two hundred and fifty-five country flags, with a search box.
+00:04:28.316 --> 00:04:36.452
+There are twenty-three line drawings, twenty classic stamp drawings, and two hundred and fifty-five flags, with a search box.
 
-55
-00:04:21.424 --> 00:04:24.848
+00:04:36.502 --> 00:04:39.923
 You can also use your own picture from your computer.
 
-56
-00:04:26.149 --> 00:04:28.378
+00:04:41.250 --> 00:04:43.447
 To move anything, just drag it.
 
-57
-00:04:28.428 --> 00:04:30.583
-It moves in half-square steps.
-
-58
-00:04:30.633 --> 00:04:35.729
+00:04:43.497 --> 00:04:48.520
 When it comes near another item, its edges and centres pull into line.
 
-59
-00:04:35.779 --> 00:04:39.772
+00:04:48.570 --> 00:04:52.507
 Pink lines show you why, and blue numbers show the gap.
 
-60
-00:04:39.822 --> 00:04:43.080
+00:04:52.557 --> 00:04:55.769
 To drag freely, hold Alt, or Option on a Mac.
 
-61
-00:04:44.383 --> 00:04:49.825
-Copy and Paste put a copy right next to the original, exactly one spacing away.
+00:04:57.083 --> 00:05:01.912
+Copy and Paste put a copy right next to the original, one spacing away.
 
-62
-00:04:49.875 --> 00:04:52.397
+00:05:01.962 --> 00:05:04.455
 You can even paste onto another page.
 
-63
-00:04:52.447 --> 00:04:59.835
+00:05:04.505 --> 00:05:11.809
 Copy keeps the caption and the size, so it's the quickest way to add a row of stamps that are all the same.
 
-64
-00:05:01.149 --> 00:05:04.468
-If items get too close, or overlap, they turn red.
+00:05:13.116 --> 00:05:19.691
+If items get too close, or overlap, they turn red, and a line above the page tells you about it.
 
-65
-00:05:04.518 --> 00:05:08.577
-One line above the page tells you how many items need a look.
+00:05:19.741 --> 00:05:23.348
+New in version eight, every warning comes with a fix.
 
-66
-00:05:08.627 --> 00:05:10.867
-Click it, and you'll see each one.
+00:05:23.398 --> 00:05:25.832
+Show me selects the items concerned.
 
-67
-00:05:12.183 --> 00:05:14.105
-Auto-align fixes it for you.
+00:05:27.149 --> 00:05:31.950
+And Fix: Auto-align this page, or the Auto-align button, puts it right.
 
-68
-00:05:14.155 --> 00:05:18.542
-It evens out the spaces, and it puts every edge on a grid line.
+00:05:32.000 --> 00:05:36.048
+It evens out the spaces, and puts every edge on a grid line.
 
-69
-00:05:18.592 --> 00:05:25.656
-Pictures and text stay where you put them, and a frame moves as one piece, with everything inside it.
+00:05:36.098 --> 00:05:41.513
+Pictures and text stay where you put them, and Auto-align never shrinks a stamp.
 
-70
-00:05:25.706 --> 00:05:28.474
-Auto-align never shrinks a single stamp.
-
-71
-00:05:29.783 --> 00:05:31.966
+00:05:42.816 --> 00:05:45.081
 Frames go round a set of stamps.
 
-72
-00:05:32.016 --> 00:05:34.967
-Select a few stamps, and press Frame these.
+00:05:45.131 --> 00:05:48.842
+Select a few stamps, and press Frame on the toolbar.
 
-73
-00:05:35.017 --> 00:05:39.712
-The frame fits round them, two and a half or five millimetres clear.
+00:05:48.892 --> 00:05:50.722
+The frame fits round them.
 
-74
-00:05:39.762 --> 00:05:46.062
-Choose one, two or three lines, or a stamp edge with real perforation teeth, in any colour.
+00:05:50.772 --> 00:05:56.942
+Choose one, two or three lines, or a stamp edge with perforation teeth, in any colour.
 
-75
-00:05:46.112 --> 00:05:48.784
+00:05:56.992 --> 00:05:59.329
+A frame can have a pale fill too.
+
+00:05:59.379 --> 00:06:02.150
 Everything inside moves with the frame.
 
-76
-00:05:50.116 --> 00:05:53.696
-New in version eight, the tab has a blue corner too.
+00:06:03.483 --> 00:06:11.729
+The Title tab, in the Title list, sits on the corner of the page border, just like the country tab on printed album pages.
 
-77
-00:05:53.746 --> 00:05:55.859
-Drag it to make the tab bigger.
+00:06:11.779 --> 00:06:16.352
+Type the country, and add a flag before the text, after it, or both.
 
-78
-00:05:55.909 --> 00:06:03.607
-It can be up to two centimetres tall, half outside the border and half inside, and up to nine centimetres wide.
+00:06:17.683 --> 00:06:20.305
+A look styles the whole album at once.
 
-79
-00:06:03.657 --> 00:06:05.911
-It's never smaller than its text.
+00:06:20.355 --> 00:06:23.048
+Under Page settings, choose Album look.
 
-80
-00:06:05.961 --> 00:06:11.564
-The line round it is now thin, or medium if you prefer, and it can be any colour.
+00:06:23.098 --> 00:06:24.384
+The app asks first.
 
-81
-00:06:12.883 --> 00:06:16.289
-Preview shows the page exactly as it will print.
+00:06:24.434 --> 00:06:31.416
+Press Change the look, and the lettering, the titles, the border and the lines change on every page.
 
-82
-00:06:16.339 --> 00:06:18.592
-There's no grid, and no colours.
+00:06:32.716 --> 00:06:35.181
+Add page opens the layout gallery.
 
-83
-00:06:18.642 --> 00:06:21.616
-You can zoom in and out whenever you like.
-
-84
-00:06:21.666 --> 00:06:24.208
-Zoom never changes the printed size.
-
-85
-00:06:25.516 --> 00:06:30.460
-New in version eight, Add page opens a small gallery of page layouts.
-
-86
-00:06:30.510 --> 00:06:32.414
+00:06:35.231 --> 00:06:37.178
 Blank page is always first.
 
-87
-00:06:32.464 --> 00:06:45.080
-Then there are six ready-made layouts: a country page, a definitive set, a single stamp with its story, a set of four, a souvenir sheet with singles, and a pocket sheet style.
+00:06:37.228 --> 00:06:43.170
+Then there are nineteen layouts, in three groups: grids, rows, and special pages.
 
-88
-00:06:45.130 --> 00:06:49.495
+00:06:43.220 --> 00:06:47.682
 Each one is drawn for your album's paper, margins and border.
 
-89
-00:06:50.816 --> 00:06:55.272
-Pick one, and the new page goes in right after the current page.
+00:06:48.983 --> 00:06:53.098
+Choose the stamp size at the top, and every picture redraws.
 
-90
-00:06:55.322 --> 00:06:57.525
-Everything on it can be changed.
+00:06:53.148 --> 00:06:57.263
+If a layout needs a little less room, it says so underneath.
 
-91
-00:06:57.575 --> 00:07:01.891
-Captions start empty, and the stamp numbers start again at S1.
+00:06:57.313 --> 00:07:01.220
+And a layout that doesn't fit at that size is greyed out.
 
-92
-00:07:03.216 --> 00:07:06.746
-The page border decorates every page of the album.
+00:07:01.270 --> 00:07:02.816
+Nothing is ever shrunk.
 
-93
-00:07:06.796 --> 00:07:17.485
-Choose from twenty-six patterns and twenty-four corners, such as the Ashoka Chakra, a lotus, a rose, a seated lion, a beaver, a kangaroo, or an eagle.
+00:07:04.150 --> 00:07:06.511
+New in version eight: My mounts add.
 
-94
-00:07:17.535 --> 00:07:20.778
-Pick any colour you like, or no border at all.
+00:07:06.561 --> 00:07:13.074
+If you use clear mounts, choose how much they add round each stamp, from one to three millimetres.
 
-95
-00:07:22.083 --> 00:07:30.560
-If you already keep your stamps in a spreadsheet, you can import the whole list, instead of adding the boxes one by one.
+00:07:13.124 --> 00:07:15.552
+You keep typing the stamp's own size.
 
-96
-00:07:30.610 --> 00:07:32.905
-Start with Download example file.
+00:07:15.602 --> 00:07:19.303
+The printed border moves out to make room for the mount.
 
-97
-00:07:32.955 --> 00:07:34.965
-It opens in Excel or Numbers.
-
-98
-00:07:35.015 --> 00:07:38.021
-It has every column, and a few sample rows.
-
-99
-00:07:38.071 --> 00:07:46.050
-Only three columns are required: the ID, which is the catalogue number, the width, and the height in millimetres.
-
-100
-00:07:47.383 --> 00:07:50.725
+00:07:20.616 --> 00:07:23.891
 Now press Import stamp list, and choose your file.
 
-101
-00:07:50.775 --> 00:07:57.443
-The app puts up to eight stamps on a page, fewer when they don't fit, and it never shrinks a stamp.
+00:07:23.941 --> 00:07:29.077
+The app asks where the stamps should go: into this album, or into a new album.
 
-102
-00:07:57.493 --> 00:08:02.668
-The new pages go after your current pages, so nothing you've made is touched.
+00:07:29.127 --> 00:07:33.665
+The app puts up to eight stamps on a page, and never shrinks a stamp.
 
-103
-00:08:02.718 --> 00:08:04.635
-Each page is aligned for you.
+00:07:33.715 --> 00:07:38.719
+Before any import, the app keeps a restore point, so you can always go back.
 
-104
-00:08:04.685 --> 00:08:09.181
-If you change your mind, Undo import takes it all back in one step.
-
-105
-00:08:10.483 --> 00:08:14.116
-Inventory shows every stamp in the album, in one table.
-
-106
-00:08:14.166 --> 00:08:20.678
-You'll see the page, the key, the catalogue number, the caption, the size, and whether you own it.
-
-107
-00:08:20.728 --> 00:08:22.419
-The counts are at the top.
-
-108
-00:08:22.469 --> 00:08:24.695
-Click a heading to sort the table.
-
-109
-00:08:24.745 --> 00:08:28.579
-Click a row, and the app takes you straight to that stamp.
-
-110
-00:08:28.629 --> 00:08:30.655
-The inventory is never printed.
-
-111
-00:08:31.983 --> 00:08:35.477
+00:07:40.050 --> 00:07:43.500
 As an album grows, finding one stamp gets harder.
 
-112
-00:08:35.527 --> 00:08:39.890
-So version eight has a Find a stamp box, just above the page.
+00:07:43.550 --> 00:07:46.144
+So there's a Find box above the page.
 
-113
-00:08:39.940 --> 00:08:44.375
+00:07:46.194 --> 00:07:50.574
 Type part of a catalogue number or a caption, and press Enter.
 
-114
-00:08:44.425 --> 00:08:47.702
+00:07:50.624 --> 00:07:53.860
 If several stamps match, you get a short list.
 
-115
-00:08:47.752 --> 00:08:53.416
-Click one, and the app goes to its page, selects the stamp, and makes it flash.
+00:07:53.910 --> 00:07:58.647
+Click one, and the app goes to its page, and makes the stamp flash.
 
-116
-00:08:53.466 --> 00:08:59.854
-You can also type a key, like three, underscore, S one, which means page three, stamp S1.
+00:07:59.949 --> 00:08:02.923
+Your work is kept automatically as you go.
 
-117
-00:09:01.183 --> 00:09:04.269
-Your work is kept automatically for Continue.
+00:08:02.973 --> 00:08:06.019
+To keep an album for good, open Save album.
 
-118
-00:09:04.319 --> 00:09:09.357
-To keep an album for good, press Save album, and pick one of three slots.
+00:08:06.069 --> 00:08:09.690
+Keep in this browser puts it in one of three slots.
 
-119
-00:09:09.407 --> 00:09:16.327
-Download album saves it as a file, with your pictures and layouts inside, so you always have a copy.
+00:08:11.016 --> 00:08:18.535
+Save to my computer saves the whole album as one file, with your pictures inside, so you always have a copy.
 
-120
-00:09:17.649 --> 00:09:20.301
-When you're ready, press Save as PDF.
+00:08:18.585 --> 00:08:21.969
+You can email it, or open it on another computer.
 
-121
-00:09:20.351 --> 00:09:25.777
-The app makes the PDF itself, at true size, and saves it to your Downloads.
+00:08:23.283 --> 00:08:25.811
+When you're ready, press Save PDF.
 
-122
-00:09:25.827 --> 00:09:32.275
-If two stamps overlap, nothing is saved, and the app takes you straight back to fix them.
+00:08:25.861 --> 00:08:30.968
+A small window asks which pages: all of them, this page, or a range.
 
-123
-00:09:32.325 --> 00:09:35.925
-Print the PDF at one hundred percent, actual size.
+00:08:31.018 --> 00:08:36.126
+It shows a preview, and reminds you to print at one hundred percent.
 
-124
-00:09:37.250 --> 00:09:40.171
+00:08:36.176 --> 00:08:37.566
+Press Make the PDF.
+
+00:08:38.883 --> 00:08:41.805
 That's Stamp Page Designer, version eight.
 
-125
-00:09:40.221 --> 00:09:44.629
+00:08:41.855 --> 00:08:46.262
 It's free, it's open source, and it runs right in your browser.
 
-126
-00:09:44.679 --> 00:09:45.832
+00:08:46.312 --> 00:08:47.465
 Happy collecting!
