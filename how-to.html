@@ -5,203 +5,227 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Stamp Page Designer — How to</title>
 <style>
-  :root{--green:#2f5d3a;--ink:#222;--muted:#5a5a5a;--line:#ddd;--bg:#f7f5f0}
+  :root{--navy:#1B365D;--burgundy:#732C2C;--ink:#2C3E50;--muted:#55606B;--line:#D9DCE0;--bg:#F4F4F0}
   body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);line-height:1.6}
   main{max-width:860px;margin:0 auto;padding:32px 20px 48px}
-  h1{font-size:1.9rem;line-height:1.2}
-  h2{font-size:1.35rem;margin-top:32px;border-bottom:2px solid var(--line);padding-bottom:6px}
+  h1{font-size:1.9rem;line-height:1.2;color:var(--navy)}
+  h2{font-size:1.35rem;margin-top:34px;border-bottom:2px solid var(--line);padding-bottom:6px;color:var(--navy)}
   h3{font-size:1.1rem;margin-top:20px}
-  p,li{font-size:1.02rem}
-  a{color:var(--green)}
+  p,li{font-size:1.04rem}
+  li{margin:3px 0}
+  a{color:var(--navy)}
   .back{font-size:1rem}
   .note{background:#fff8e1;border:1px solid #e6c87a;border-radius:10px;padding:14px 18px}
   nav{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 20px}
   nav a{display:block;margin:4px 0}
+  kbd{background:#fff;border:1px solid #c9d0d7;border-radius:4px;padding:0 5px;font-size:.92em}
   footer{margin-top:36px;color:var(--muted);font-size:.95rem;border-top:1px solid var(--line);padding-top:16px}
-  table { border-collapse: collapse; margin: 10px 0 14px; width: 100%; } th, td { border: 1px solid #d6d6d6; padding: 6px 9px; text-align: left; vertical-align: top; } th { background: #eef3ef; }
+  table{border-collapse:collapse;margin:10px 0 14px;width:100%}
+  th,td{border:1px solid #d6d6d6;padding:6px 9px;text-align:left;vertical-align:top}
+  th{background:#EEF1F5}
 </style>
 </head>
 <body>
 <main>
   <p class="back"><a href="index.html">← Back to Welcome</a> · <a href="stamp-page-designer.htm">Open the Tool →</a></p>
   <h1>How to use Stamp Page Designer</h1>
-  <p>Version 8.0.0. This guide follows the tool in the order you meet it: first screen, then the editor, then preview and saving your PDF. It is deliberately short — the tool is meant to be used, not studied. The full Guide is inside the tool (the <strong>?</strong> Guide button).</p>
+  <p>Version 8.0.0. This guide follows the tool in the order you meet it: the first screen, the editor, the items you put on a page, then saving and printing. It is deliberately short — the tool is meant to be used, not studied. The full Guide is inside the tool (<strong>? Help</strong>), and the <strong>FAQ</strong> tab beside Settings answers the common questions.</p>
+
+  <div class="note"><strong>Coming from version 7?</strong> Your albums open and print exactly as before. Only the screen changed — and some names:
+    <table>
+      <tr><th>Now</th><th>In version 7</th></tr>
+      <tr><td>Title / Subtitle</td><td>Page Header / Subheader</td></tr>
+      <tr><td>Story box</td><td>Description box</td></tr>
+      <tr><td>Side text</td><td>Margin text</td></tr>
+      <tr><td>Picture</td><td>Clip Art</td></tr>
+      <tr><td>Line</td><td>Divider</td></tr>
+      <tr><td>Save album ▾ → Keep in this browser…</td><td>Save album…</td></tr>
+      <tr><td>Save album ▾ → Save to my computer</td><td>Download album</td></tr>
+      <tr><td>Open from my computer…</td><td>Open album file…</td></tr>
+      <tr><td>Save PDF</td><td>Print / Save as PDF</td></tr>
+    </table>
+  </div>
 
   <nav>
     <strong>Contents</strong>
     <a href="#first">1. The first screen</a>
-    <a href="#editor">2. The editor, top to bottom</a>
-    <a href="#stamps">3. Stamps, text and headers</a>
-    <a href="#decor">4. Clip Art, dividers, frames, Title tab and Margin text</a>
-    <a href="#pagesettings">5. Page Settings</a>
-    <a href="#preview">6. Preview, Save as PDF and printing</a>
-    <a href="#warnings">7. Warnings, undo and shortcuts</a>
-    <a href="#storage">8. Where your work lives</a>
-    <a href="#pages">9. Pages and page layouts</a>
-    <a href="#find">10. Find a stamp</a>
-    <a href="#power">11. Power user: stamp lists and inventory</a>
+    <a href="#editor">2. The editor at a glance</a>
+    <a href="#stamps">3. Stamps</a>
+    <a href="#text">4. Titles and text</a>
+    <a href="#decor">5. Pictures, frames, lines, covers, Title tab and Side text</a>
+    <a href="#moving">6. Moving, typing and the small toolbar</a>
+    <a href="#pagesettings">7. Page settings: look, mounts, border</a>
+    <a href="#pages">8. Pages and page layouts</a>
+    <a href="#print">9. Save PDF and printing</a>
+    <a href="#storage">10. Saving your album</a>
+    <a href="#warnings">11. Warnings, Undo and shortcuts</a>
+    <a href="#find">12. Find a stamp</a>
+    <a href="#sheet">13. Spreadsheet &amp; inventory</a>
   </nav>
 
   <h2 id="first">1. The first screen</h2>
-  <p>Every time you open the tool, you land on the first screen. Nothing opens automatically.</p>
+  <p>Every time you open the tool you land here. Nothing opens by itself.</p>
   <ul>
-    <li><strong>Continue your last work</strong> — opens the project you were last working on, with its pages, zoom, selection, and undo history.</li>
-    <li><strong>Saved albums (up to 3)</strong> — buttons showing name and date only. Clicking one loads the full album. Saving a fourth album asks which slot to replace — it never silently deletes one, and never creates a fourth.</li>
-    <li><strong>Open album file…</strong> — brings back an album you saved with <strong>Download album</strong>, pictures included. You choose which of the 3 slots to keep it in; a slot that holds another album is only replaced after asking.</li>
-    <li><strong>Saved settings (up to 3)</strong> — saved combinations of paper, margins, punch-hole, spacing, caption font, frame line and page border. No stamps, no pages. Applied in one step.</li>
-    <li><strong>Start fresh</strong> — starts a brand new project. See §2 below for its steps.</li>
+    <li><strong>Continue your last work</strong> — the album you were last working on, kept automatically.</li>
+    <li><strong>Saved albums (up to 3)</strong> — name and date; click one to open it. Keeping a fourth asks which slot to replace — it never deletes one silently.</li>
+    <li><strong>Open from my computer…</strong> — brings back an album you saved with <em>Save to my computer</em>, pictures included.</li>
+    <li><strong>Restore: before import</strong> — appears after you import or reload a stamp list; brings the album back exactly as it was before.</li>
+    <li><strong>Look at example pages (18)…</strong> — finished pages made with the tool. Open one to look round it; nothing you do is kept and your own work is not touched. <em>Make a copy to edit</em> turns it into your album.</li>
+    <li><strong>Start a new album</strong>: 1. margins, 2. paper, 3. spacing, 4. album name and how many pages, <strong>5. Look</strong> (Standard, Classic, Contemporary, Modern or Minimalist) and <strong>6. First page</strong> (Blank, or a layout — see §8). Then <strong>Start designing</strong>.</li>
   </ul>
 
-  <h2 id="editor">2. The editor, top to bottom</h2>
-  <h3>Start fresh, step by step</h3>
+  <h2 id="editor">2. The editor at a glance</h2>
+  <h3>The navy bar</h3>
+  <p><strong>← Home · album name · ↶ Undo · ↷ Redo · ? Help · ⌨ · Aa · Save album ▾ · Save PDF</strong></p>
+  <ul>
+    <li><strong>⌨</strong> shows every keyboard shortcut, and the screen settings (interface size and Real size).</li>
+    <li><strong>Aa</strong> switches the interface between Normal, Large and Extra large: buttons, panels and lettering grow; the page itself stays at true size.</li>
+    <li><strong>Save album ▾</strong> saves the album itself (§10). <strong>Save PDF</strong> makes the PDF to print (§9).</li>
+  </ul>
+  <h3>The Add bar — eight buttons</h3>
+  <table>
+    <tr><th>Button</th><th>What it adds</th></tr>
+    <tr><td>Stamp ▾</td><td>Small 25 × 25, Medium 30 × 30, Large 35 × 35, Extra large 40 × 40 mm, Custom (any rectangle) or Triangle. The size you used last is marked.</td></tr>
+    <tr><td>Title ▾</td><td>Title (one a page), Subtitle (up to two), Title tab</td></tr>
+    <tr><td>Text ▾</td><td>Text label (up to 4 lines, anywhere), Story box (a paragraph)</td></tr>
+    <tr><td>Picture</td><td>Line pictures, engraved-style stamps, 255 flags, or your own picture</td></tr>
+    <tr><td>Frame</td><td>A frame round the selected stamps (or an empty one)</td></tr>
+    <tr><td>Line</td><td>A divider between rows</td></tr>
+    <tr><td>Margin</td><td>Side text, reading up the side margin</td></tr>
+    <tr><td>Page ▾</td><td>Add a page, Duplicate this page, Save as a layout</td></tr>
+  </table>
+  <p>A list closes when you pick, click elsewhere or press <kbd>Escape</kbd>.</p>
+  <h3>Around the page</h3>
+  <ul>
+    <li><strong>Pages</strong> (left): every page; <em>+ Add page</em>, <em>Duplicate page</em>, <em>Save as a layout…</em>, ↑ ↓, <em>Arrange pages…</em>, <em>Remove page</em>. At the foot, <strong>✓ Saved … ago</strong> shows your work is being kept.</li>
+    <li><strong>Settings | FAQ</strong> (right): the selected item's settings — essentials first, the rest under <strong>More options</strong> — and Page settings below. The FAQ tab has short answers and a search box.</li>
+    <li><strong>Above the page</strong>: Preview, Auto-align, Select All, Copy, Paste, Start fresh, <em>Find a stamp</em>, <strong>⤢ More room</strong>, and zoom (−, +, Fit to width, Fit to page, 100%, <strong>📏 Real size</strong>).</li>
+    <li><strong>More room</strong> (or the <kbd>F</kbd> key) folds both panels and the Add bar away; « » ⌃ fold them one by one, leaving a slim strip to bring each back. Clicking an item brings Settings back by itself.</li>
+    <li><strong>📏 Real size</strong>: the first time, hold a bank card to the screen and match the blue card; from then on the page shows its true millimetres on that screen. Zoom never changes the printed size.</li>
+  </ul>
+
+  <h2 id="stamps">3. Stamps</h2>
+  <ul>
+    <li><strong>Size</strong>: the four sizes, Custom (any rectangle up to 210 × 210 mm, typed in mm) or Triangle (base × height). Measure the stamp itself.</li>
+    <li><strong>Caption</strong>: one line under the stamp, or tick <em>Multiple lines</em> for up to 4, each as wide as the stamp. Caption font is set per page (18 fonts).</li>
+    <li><strong>More options</strong>: border on or off, mount (Standard 2.5 mm clearance, Strips 5 mm), frame line (Dashed, Solid or Perforated — the album default is in Page settings), and short text inside the box (a value or shade), printed only if you tick <em>Print it</em>.</li>
+    <li><strong>S-numbers</strong> (S1, S2 …) show in the box's corner on screen only, in the order added; never printed, never reused.</li>
+    <li><strong>Copy a stamp</strong> to another page: select it, <em>Copy</em>, go to the page, <em>Paste</em> — it keeps its size, frame line and caption.</li>
+    <li>Several stamps selected: <em>Make these the same size</em> sets one width and height in one step.</li>
+  </ul>
+
+  <h2 id="text">4. Titles and text</h2>
+  <ul>
+    <li><strong>Title</strong>: one a page, 20–40 mm tall. Font, size, bold/italic/underline and colour; under More options: width (Narrower, Fit the width to the text), position (Far left … Far right), border and background.</li>
+    <li><strong>Flag in the Title</strong>: None, Before, After or Both — inside the Title's box, sized to its letters, and Fit to text makes room for it.</li>
+    <li><strong>Subtitle</strong>: up to two a page, 15–25 mm tall, the same text choices.</li>
+    <li><strong>Text label</strong>: a borderless label anywhere, up to 4 lines; left, centre or right; line spacing; first line bold or underlined.</li>
+    <li><strong>Story box</strong>: a paragraph in a box, 30–200 mm wide; it may sit tight against a stamp. A pale <strong>Fill</strong> (10% or 20%) can sit behind the text.</li>
+    <li>New Text labels and Story boxes start in the font you chose last for one.</li>
+  </ul>
+
+  <h2 id="decor">5. Pictures, frames, lines, covers, Title tab and Side text</h2>
+  <ul>
+    <li><strong>Picture</strong>: the panel shows everything first; a picture is added when you click one. Line pictures (philatelic, postal, heraldic) in the border colour or any colour; engraved-style classic stamps; 255 flags (type “Bel” to find Belgium); or your own picture (JPEG, PNG, WebP or GIF up to 25 MB — made smaller for you; save iPhone HEIC as JPEG first). Only use pictures you are allowed to use.</li>
+    <li><strong>Frame</strong>: select stamps and press Frame. One, two or three lines, Stamp edge, rounded corners, any colour, 2.5 or 5 mm clear, and a pale <strong>Fill</strong> (grey, cream, pale blue, pale green or pale rose at 10% or 20%). A new frame gets the line you chose last. Everything inside moves with it.</li>
+    <li><strong>Cover box</strong> (envelopes and covers): from the Envelope layouts (§8). 140 × 90 mm, 165 × 92 mm (#6¾ / C6) or your own size, at true size; one line for a plain box or two/three lines for a framed one; a pale fill if you like. A long #10 / DL envelope does not fit a portrait page.</li>
+    <li><strong>Line</strong>: single, double, double wavy, dotted, thick-and-thin, or a short line with an ornament; Thin, Medium or Thick; any colour; full width or Narrower.</li>
+    <li><strong>Title tab</strong>: a label on a top corner of the page border, partly outside it; 1 or 2 lines, a flag before or after; drag its corner to resize (up to 2 × 9 cm).</li>
+    <li><strong>Side text</strong> (Margin ▾): one line reading up the side margin, up to two each side, with flags. Not shown with Dense margins.</li>
+  </ul>
+  <p>Working colours on screen (never printed): Title yellow, Subtitle blue, stamps green, Story box grey, Picture purple, Line orange, Text / Title tab / Side text teal, Frame pink.</p>
+
+  <h2 id="moving">6. Moving, typing and the small toolbar</h2>
+  <ul>
+    <li><strong>Drag</strong> any item. It snaps to its neighbours' edges and centres (a pink line shows); hold <kbd>Alt</kbd> (<kbd>Option</kbd> on a Mac) to place it freely — a reminder shows while you drag.</li>
+    <li><strong>Arrow keys</strong>: plain = next 2.5 mm line; <kbd>Shift</kbd> = 1.25 mm; <kbd>Alt</kbd>+<kbd>Shift</kbd> = 0.625 mm for pocket sheets.</li>
+    <li><strong>Exact position</strong> (folded, at the bottom of an item's settings): the distance from the paper's top-left corner to the outer printed edge, in mm.</li>
+    <li><strong>Type on the page</strong>: double-click a Title, Subtitle, Text label, Story box, Title tab or Side text — or a stamp, for its caption. <kbd>Enter</kbd> keeps it, <kbd>Shift</kbd>+<kbd>Enter</kbd> starts a new line where allowed, <kbd>Escape</kbd> cancels.</li>
+    <li><strong>The small toolbar</strong> above the selected item: for a stamp <strong>S M L XL</strong>, <strong>✎ Caption</strong>, <strong>Copy</strong>, <strong>Frame</strong>, <strong>Delete</strong>; for text <strong>✎ Edit text</strong>, Copy, Delete.</li>
+    <li><strong>Auto-align</strong> evens out the spaces onto the 2.5 mm grid, never shrinking stamps; pictures, Text labels and fine-moved items stay put (it asks first). With a frame selected, it arranges only what is inside.</li>
+  </ul>
+
+  <h2 id="pagesettings">7. Page settings: look, mounts, border</h2>
+  <ul>
+    <li><strong>Album look</strong> — every page: Standard (the version 7 look), Classic (serif, boxed title, ornament corners), Contemporary (clean sans, soft title band), Modern (bold, title on the left), Minimalist (light sans, no border). Changing it asks first, <strong>moves nothing</strong>, and one Undo brings the old look back.</li>
+    <li><strong>My mounts add</strong> — 0 mm (hinges) to 3 mm, the whole album. Keep typing the stamp's own size; the border is drawn round the stamp plus its mount (a 30 mm stamp with 2 mm mounts prints a 39 mm border). If a stamp then reaches the border, use <em>Fix: Auto-align this page</em>.</li>
+    <li><strong>Paper</strong> (Letter, A4, Legal, A3 and 12 album brands), <strong>margins</strong> (Classic or Dense, with punch-hole), <strong>spacing</strong> (Tight 5, Narrow 10, Normal 20, Wide 30 mm), <strong>frame line</strong>, <strong>page border</strong> (26 patterns, 24 corners, Small/Medium/Large, or None) and <strong>page numbers</strong>.</li>
+    <li><strong>Saved settings</strong> (up to 3): paper, margins, spacing, caption font, frame line and border in one step.</li>
+  </ul>
+
+  <h2 id="pages">8. Pages and page layouts</h2>
+  <ul>
+    <li><strong>+ Add page</strong> opens the layouts. At the top choose the <strong>stamp size</strong> (or your own) and the <strong>cover size</strong>; the pictures redraw.
+      <ul>
+        <li><strong>Grids</strong>: Single feature (one stamp and its story), Pair, 2 × 2, 3 × 3, 4 × 4.</li>
+        <li><strong>Rows</strong>: Country page, 2 + 3 + 2, 2 + 3 + 3, 3 + 2 + 3, 3 + 3, 1 + 2 + 3, 1 large + 4, Definitive set, Set of four.</li>
+        <li><strong>Special</strong>: Envelope: cover, Envelope: cover story, Souvenir sheet + singles, Strips, Triangle row.</li>
+        <li><strong>Your layouts</strong> — pages you saved with <em>Save as a layout…</em> (up to 12, in every album).</li>
+      </ul>
+      Stamps are never shrunk: a layout that doesn't fit says so (“Doesn't fit at Extra large — try Large”). A card that says “Uses Narrow spacing” or “Uses Dense margins” fits only that way. Every layout follows the album's paper, margins, border and look.</li>
+    <li><strong>Duplicate page</strong> copies the page right after it — the quickest way to the next page of a series.</li>
+    <li><strong>Arrange pages…</strong> shows every page as a picture: drag them into order (or ← →), then <em>Done</em>. One Undo puts them back.</li>
+    <li><strong>Remove page</strong> asks first; Undo brings it back.</li>
+  </ul>
+
+  <h2 id="print">9. Save PDF and printing</h2>
   <ol>
-    <li><strong>Save first?</strong> — “Do you want to save your current work as an album first?” Choose <em>Save it first</em>, <em>Don't save</em>, or <em>Cancel</em>. Cancel leaves your current project completely unchanged.</li>
-    <li><strong>If you chose Don't save</strong> — a “Discard unsaved work?” confirm appears. Discard goes forward; Cancel goes back unchanged.</li>
-    <li><strong>Name</strong> — give the new project a name.</li>
-    <li><strong>Settings</strong> — pick a saved settings combination, or Default settings, if saved settings exist.</li>
-    <li><strong>Clean page</strong> — a new page, 1 page, 0 stamps, with those settings applied. Nothing is carried over from the old project.</li>
+    <li><strong>Preview</strong> hides the grid, working colours and warnings — it is what prints.</li>
+    <li>Press <strong>Save PDF</strong>. Choose <strong>All pages</strong>, <strong>This page</strong> or <strong>Pages … to …</strong>; a picture of the first page is shown. Press <em>Make the PDF</em>.</li>
+    <li>Chrome and Edge ask where to save it; Safari and Firefox put it in Downloads. The PDF is made in the tool: true size, each page at its own paper size, sharp text.</li>
+    <li><strong>Print at 100% only (Actual size)</strong> — never “Fit to page”. A 30 mm box then measures 30 mm: check your first print with a ruler.</li>
   </ol>
-  <h3>The view bar</h3>
+  <p>A stamp overlapping another stamp or the page border stops the PDF and takes you to it; closeness and other overlaps are only warned about. A PDF can't be opened back in the tool — keep the album too (§10).</p>
+
+  <h2 id="storage">10. Saving your album</h2>
   <ul>
-    <li><strong>Add</strong> — stamps (four sizes, custom, triangle), Page Header, Subheader, Description box, <strong>Text</strong>, <strong>Clip Art</strong>, <strong>Divider</strong>, <strong>Frame</strong>, <strong>Title tab</strong> and <strong>Margin text</strong>. The buttons share one row and wrap on smaller screens.</li>
-    <li><strong>Auto-align</strong> — tidies the page onto the 2.5&nbsp;mm grid, respecting your spacing, and never switches to Tight by itself. Every box edge lands on a visible 2.5&nbsp;mm line, and stamps are never shrunk.
-      <ul>
-        <li>Pictures, Text boxes and fine-moved items never move; rows are laid out around them. On a page that has any, Auto-align asks first — <em>Align around them</em> or <em>Cancel</em>.</li>
-        <li>Dividers start a new section; headers, subheaders and dividers keep the position you chose for them.</li>
-        <li>A <strong>frame</strong> and everything inside it count as one item. With a <strong>frame selected</strong>, Auto-align arranges only what is inside it, and the frame grows if needed.</li>
-      </ul>
-    </li>
-    <li><strong>Snap to neighbours</strong> — while dragging, an item's edge or centre within about 1&nbsp;mm of a neighbour's edge or centre, or the page centre, pulls onto that line, with a pink alignment line shown on screen only. It can also snap to exactly your chosen spacing from a neighbour, with the blue gap measurement shown. Keep dragging past it to break free, or hold Alt (Option on Mac) to turn neighbour snapping off for that drag.</li>
-    <li><strong>Select All</strong> — selects everything on the current page. With several stamps selected, <strong>Make these the same size</strong> sets them all to one width and height in a single step (it refuses, and names them, if any would not fit).</li>
-    <li><strong>Copy / Paste</strong> — copies the selected items. Paste puts them in the first free space. Copy is session-only.</li>
-    <li><strong>Download album</strong> — saves the whole album, pictures included, as one <strong>.stampalbum</strong> file.</li>
-    <li><strong>Zoom, Fit to page, Fit to width</strong> — zoom changes only your view, never the printed size.</li>
-    <li><strong>Undo / Redo</strong> — up to 10 steps. One Undo reverts a whole applied settings combination, a whole group move, or a whole Auto-align.</li>
-    <li><strong>Shortcuts</strong> — the Shortcuts button, or the <strong>?</strong> key, shows every keyboard shortcut on one card.</li>
+    <li>Your work is kept <strong>in this browser automatically</strong> as you go (<em>✓ Saved … ago</em>) — that is <em>Continue your last work</em>.</li>
+    <li><strong>Save album ▾ → Keep in this browser…</strong> keeps it in one of 3 named slots, in this browser only.</li>
+    <li><strong>Save album ▾ → Save to my computer</strong> saves one <strong>.stampalbum</strong> file — every page, the setup and your pictures. Copy or email it; <em>Open from my computer…</em> brings it back on any computer. Do this now and then: there is no account and no cloud copy.</li>
+    <li><strong>Safari</strong> may clear a website's storage if you don't visit for about a week — save to your computer regularly.</li>
   </ul>
 
-  <h2 id="stamps">3. Stamps, text and headers</h2>
-  <h3>Stamp boxes</h3>
+  <h2 id="warnings">11. Warnings, Undo and shortcuts</h2>
   <ul>
-    <li><strong>Sizes:</strong> Small 25&nbsp;×&nbsp;25&nbsp;mm, Medium 30&nbsp;×&nbsp;30&nbsp;mm, Large 35&nbsp;×&nbsp;35&nbsp;mm, Extra Large 40&nbsp;×&nbsp;40&nbsp;mm. Custom stamps can be any rectangle, up to 210&nbsp;×&nbsp;210&nbsp;mm.</li>
-    <li><strong>Moving:</strong> drag any item from anywhere on it. A plain arrow key jumps to the next 2.5&nbsp;mm line; Shift + arrow moves 1.25&nbsp;mm; <strong>Alt + Shift + arrow</strong> moves 0.625&nbsp;mm for pocket sheets — a fine-moved item is then left alone by Auto-align. Finer grid lines appear as you zoom in (screen only).</li>
-    <li><strong>Exact position</strong> — a folded section at the bottom of an item's settings shows its distance from the top-left corner of the paper to its outer printed edge (left, top and bottom, in mm) — handy for measuring against a pocket sheet with a ruler. It remembers whether you left it open.</li>
-    <li><strong>Resizing:</strong> stamps resize with the mouse in 1.25&nbsp;mm steps, the caption moving with the box. Description boxes, Text boxes, pictures and frames resize from their blue corners.</li>
-    <li><strong>Frame line</strong>: the stamp box is <em>Dashed grey</em> or <em>Solid black</em> — set for the whole album in Page Settings, and changeable for any single stamp, which can also be <strong>Perforated</strong> <em>(new in 8.0)</em>, a fine stamp-edge line.</li>
-    <li><strong>Captions:</strong> a 5&nbsp;mm strip below each stamp. Tick <strong>Multiple lines</strong> for up to 4 lines, each as wide as the stamp; the strip grows 5&nbsp;mm per line. Caption font is set per page — Source Sans 3, 9&nbsp;pt by default, from 18 fonts.</li>
-    <li><strong>Text inside the frame</strong>: a short note inside the box (a value, a shade). It prints only if you tick <strong>Print it</strong>; otherwise it shows on screen with a crossed-out printer icon.</li>
-    <li><strong>S-numbers:</strong> each stamp gets an S-number in the order it was added on that page, shown in the box's upper-left corner. S-numbers never print and are never reused.</li>
-    <li><strong>Mounts:</strong> Standard mount clearance 2.5&nbsp;mm per side, Strips 5&nbsp;mm per side. Spacing between items: Tight 5&nbsp;mm, Narrow 10&nbsp;mm, Normal 20&nbsp;mm, Wide 30&nbsp;mm, across and down separately.</li>
-    <li><strong>Triangle:</strong> one point-up triangle tile, with Base and Height inputs and a 2&nbsp;mm border.</li>
-  </ul>
-  <h3>Headers and subheaders</h3>
-  <ul>
-    <li><strong>Page Header:</strong> optional, one per page, heights 20 / 25 / 30 / 35 / 40&nbsp;mm (20&nbsp;mm is new in 8.0). <strong>Subheaders:</strong> up to 2 per page, heights 15 / 20 / 25&nbsp;mm.</li>
-    <li><strong>Position</strong>: <strong>Far left · Left · Centre · Right · Far right</strong>, once the box is narrower than full width (Narrower or Fit the width to the text). Left and Right sit 2&nbsp;cm in; Far left and Far right sit against the edge of the usable area. The text follows the side, and Auto-align keeps it there.</li>
-    <li>Headers move up and down by dragging or with the arrow keys.</li>
-  </ul>
-  <h3>Text boxes and description boxes</h3>
-  <ul>
-    <li><strong>Text</strong> <em>(new, pale teal)</em>: a borderless label anywhere on the page, up to 4 lines — left, centre or right aligned, with line spacing (Tight, Normal, Relaxed), <strong>first line bold</strong> and <strong>first line underlined</strong>, any font, size and text colour. More than 4 lines shows red and only the first 4 print.</li>
-    <li><strong>Description boxes:</strong> centred text, width 30–200&nbsp;mm, height 10–200&nbsp;mm, text up to 30&nbsp;pt. They may sit tight against a stamp with no warning — only a real overlap is reported.</li>
+    <li>Warnings appear above the page, grouped and counted. Under them, <strong>Fix: Auto-align this page</strong> evens out the spaces and <strong>Show me</strong> selects the items concerned.</li>
+    <li><strong>Undo / Redo</strong>: up to 10 steps; point at Undo to see the step (“Undo: Add stamp S4”). <kbd>Ctrl</kbd>+<kbd>Z</kbd> / <kbd>Cmd</kbd>+<kbd>Z</kbd> undoes, <kbd>Ctrl</kbd>+<kbd>Y</kbd> or <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Z</kbd> redoes. While you type in a box, these undo your typing instead.</li>
+    <li><strong>⌨</strong> (or the <kbd>?</kbd> key) shows every shortcut; <kbd>F</kbd> = More room; <kbd>Delete</kbd> removes the selection; <kbd>Escape</kbd> clears it.</li>
   </ul>
 
-  <h2 id="decor">4. Clip Art, dividers, frames, Title tab and Margin text</h2>
-  <ul>
-    <li><strong>Clip Art</strong> (called Art before 7.0): pressing it <strong>adds nothing yet</strong> — the panel shows everything to choose from, and a picture is added in a free spot only when you click it (or press Cancel).
-      <ul>
-        <li><strong>23 line pictures</strong> (philatelic, postal, heraldic) — in the page-border colour, any border colour, or any colour you pick.</li>
-        <li><strong>20 Classic stamps</strong> — engraved-style drawings in the style of famous early stamps (Basel Dove style, Bullseye style, Three-penny Beaver style, Bluenose schooner style …), added 40&nbsp;mm on the long side.</li>
-        <li><strong>255 flags</strong> — type a few letters (“Bel”) to find one. They print in their own colours.</li>
-        <li><strong>Your own picture</strong> — JPEG, PNG, WebP or GIF up to 25&nbsp;MB, made smaller for you automatically. iPhone HEIC photos must be saved as JPEG first. Only use pictures you are allowed to use.</li>
-      </ul>
-    </li>
-    <li><strong>Divider:</strong> pressing it shows the styles first — single, double, double wavy, dotted, thick-and-thin, or a short line with an ornament. Weights Thin, Medium, Thick; any colour. <strong>Narrower</strong> takes 2&nbsp;cm off each side; then choose <strong>Far left · Left · Centre · Right · Far right</strong>, like headers.</li>
-    <li><strong>Frame</strong> <em>(pale pink)</em>: an ornamental rectangle round a stamp, a set or a row. Select stamps and press <strong>Frame</strong> (or <em>Frame, 2.5&nbsp;mm clear</em> / <em>5&nbsp;mm clear</em>); the stamps keep their own borders. Lines: one, two or three; <strong>Stamp edge</strong> (perforation teeth); <strong>Stamp edge + rule</strong>; or <strong>Hidden</strong> (groups only, never printed). Thin, Medium or Thick, square or rounded corners, any colour. Everything inside moves with the frame. A frame can't go inside another frame.</li>
-    <li><strong>Title tab</strong>: a label on the top-left or top-right corner of the page border, partly outside it, like the country tab on printed album pages. 1 or 2 lines, an optional line round it, and a flag before and/or after the text (the same flag or two different ones). The border breaks behind it and that corner's ornament is left out. <strong>Resize it</strong> <em>(new in 8.0)</em>: select it and drag its blue corner, or type the size — never smaller than its text, at most 2&nbsp;cm tall (1&nbsp;cm outside the border, 1&nbsp;cm inside) and 9&nbsp;cm wide (up to 8&nbsp;cm inside, then 1&nbsp;cm outside). <strong>Fit to text</strong> puts it back. The line round it is <strong>Thin</strong> on new tabs, or <strong>Medium</strong>, in any colour; tabs made before 8.0 keep their Medium line. It stays in its corner, and Auto-align leaves it alone.</li>
-    <li><strong>Margin text</strong>: one line reading bottom to top in the side margin — up to two on each side (Left 1, Left 2, Right 1, Right 2), each sliding up and down, with flags before and/or after. It keeps clear of the punch holes and the printer's 4&nbsp;mm edge. <strong>Not with Dense margins</strong> — the edge is too crowded, so the button is greyed out there.</li>
-  </ul>
+  <h2 id="find">12. Find a stamp</h2>
+  <p>The box above the page (“Catalogue no. or caption”) searches the whole album. Type part of a catalogue number or caption, or a key such as 3_S2 (page 3, stamp S2), and press <kbd>Enter</kbd>. One match: it goes to the page, selects the stamp and makes it flash. Several: a short list to choose from.</p>
 
-  <h2 id="pagesettings">5. Page Settings</h2>
-  <p>Page Settings is a permanent panel under the selected-item panel. It is album-wide, and its open/closed state is remembered.</p>
-  <ul>
-    <li><strong>Paper:</strong> Letter, A4, Legal, A3, plus Scott National &amp; Specialty, Scott International, Scott Minuteman, Minkus, Davo, H. E. Harris, Stanley Gibbons, Palo, Lighthouse, White Ace, Mystic Heirloom and Schaubek — portrait only.</li>
-    <li><strong>Margins:</strong> Classic or Dense. With punch-hole on, the left margin grows by ½ inch.</li>
-    <li><strong>Frame line:</strong> Dashed grey or Solid black for every stamp box (each stamp can override it).</li>
-    <li><strong>Page border:</strong> <strong>26 patterns</strong> and <strong>24 corners</strong> — new in 7.0: the <strong>Ashoka Chakra</strong> (pattern, corner and divider ornament; it turns Navy when chosen), <strong>lotus</strong> and <strong>rose</strong> patterns and corners, and <strong>seated lion, beaver, kangaroo and eagle</strong> corners, centred on the corner and upright at the bottom too. Small, Medium or Large. Border and corner colour: 8 colours or <strong>any colour</strong> (Custom…). Or None.</li>
-    <li><strong>Page numbers:</strong> off by default. When on, centred under the page border, starting at 1 or any number you choose; tick <strong>Write “Page” before the number</strong> for “Page 17”.</li>
-    <li><strong>Saved settings:</strong> save the current combination; applying one is one action, and one Undo reverts it.</li>
-  </ul>
-  <p>Working colours on screen only, never printed: header pale yellow, subheader pale blue, stamps pale green, description pale grey, Clip Art pale purple, divider pale orange, Text / Title tab / Margin text pale teal, frames pale pink.</p>
-
-  <h2 id="preview">6. Preview, Save as PDF and printing</h2>
-  <ul>
-    <li><strong>Preview</strong> hides the grid, working colours and warnings. What you see in Preview is the layout that prints.</li>
-    <li><strong>Print / Save as PDF</strong>: the tool makes the PDF itself and saves it to your Downloads — no print window. Every page is at true size and at its own paper size (one album can mix Letter, A4 and others), with sharp, searchable text. If a browser can't make it, the tool offers the browser's print window instead.</li>
-    <li><strong>Then print the PDF at 100% only</strong> (Actual size), never “Fit to page”. At 100%, a 30&nbsp;mm stamp box measures 30&nbsp;mm — check your first print with a ruler.</li>
-    <li><strong>Save album</strong> keeps the full editable project in one of the 3 slots; <strong>Download album</strong> keeps it as a file. A PDF cannot be reopened as a project.</li>
-  </ul>
-
-  <h2 id="warnings">7. Warnings, undo and shortcuts</h2>
-  <ul>
-    <li><strong>Warnings</strong> appear as a folded line on the page, counted by kind of problem and by item. Opening the line lists each item with its clash partners.</li>
-    <li><strong>Genuine overlaps do not print:</strong> a stamp overlapping another stamp or the page border is not printed — you are taken back to that page to fix it. Closeness alone, and pictures, dividers, text or frames overlapping something, are warned about but never block the PDF.</li>
-    <li><strong>Saved work from 6.0 opens unchanged:</strong> albums, saved settings and Continue work from 6.0.0 (and 5.1.0) open exactly as saved.</li>
-    <li><strong>Duplicate page</strong> creates a copy right after the original.</li>
-    <li><strong>No crop marks, no landscape, no circle or pentagon shapes</strong> — by design, to keep the tool simple and the pages clean.</li>
-  </ul>
-
-  <h2 id="storage">8. Where your work lives</h2>
-  <div class="note">
-    <p><strong>Your albums live in this browser, on this device.</strong> There is no account and no cloud copy. Use <strong>Download album</strong> now and then to keep a <strong>.stampalbum</strong> file with every page and picture — <strong>Open album file…</strong> on the first screen brings it back, on this computer or another.</p>
-    <p><strong>Safari tip:</strong> Safari may clear a website's storage if you don't visit it for about a week. Download your albums regularly.</p>
-    <p>Continue your last work is a separate, automatically kept slot, distinct from the three named albums. Your own pictures are kept once in the browser, apart from the albums.</p>
-  </div>
-
-
-  <h2 id="pages">9. Pages and page layouts</h2>
-  <ul>
-    <li><strong>+ Add page</strong> <em>(new in 8.0)</em> opens a small gallery. <strong>Blank page</strong> is first; then six ready-made layouts — <strong>Country page</strong>, <strong>Definitive set</strong>, <strong>Single stamp</strong> (with a description box), <strong>Set of four</strong>, <strong>Souvenir sheet + singles</strong> and <strong>Pocket-sheet style</strong> — and any layouts you saved yourself. Each is drawn for your album's paper, margins and border, and goes right after the current page. Captions start empty and S-numbers start again at S1.</li>
-    <li><strong>Duplicate page</strong> makes a full copy right after the original — the quickest way to make the next page of a series. <strong>↑ / ↓</strong> reorder pages; <strong>Remove page</strong> asks first, and Undo brings it back.</li>
-  </ul>
-
-  <h2 id="find">10. Find a stamp</h2>
-  <p><em>(New in 8.0.)</em> The <strong>Find a stamp</strong> box above the page searches the whole album. Type part of a <strong>catalogue number</strong>, part of a <strong>caption</strong>, or a <strong>key</strong> such as <strong>3_S2</strong> (page 3, stamp S2), and press <strong>Enter</strong>. One match: it goes to the page, selects the stamp and makes it flash. Several: a short list — click one.</p>
-
-  <h2 id="power">11. Power user: stamp lists and inventory</h2>
-  <p><em>(New in 8.0.)</em> Under Page settings, a folded <strong>Power user</strong> section (closed to start with). You never need it for ordinary pages.</p>
+  <h2 id="sheet">13. Spreadsheet &amp; inventory</h2>
+  <p>Under Page settings, a folded <strong>Spreadsheet &amp; inventory</strong> section. You never need it for ordinary pages.</p>
   <h3>Import a stamp list</h3>
   <ol>
-    <li>Press <strong>Download example file</strong>. It opens in Excel or Numbers, with every column and sample rows.</li>
-    <li>Replace the sample rows with your stamps, and save as <strong>CSV</strong> (XML works too).</li>
-    <li>Press <strong>Import stamp list…</strong> and choose the file.</li>
+    <li>Press <strong>⬇ Get the example file</strong>. It opens in Excel or Numbers with every column and sample rows.</li>
+    <li>Replace the sample rows with your stamps and save as CSV (XML works too).</li>
+    <li>Press <strong>Import stamp list…</strong> — or, on an empty page, simply drop the file onto the page.</li>
+    <li>If the album already has pages, choose <strong>This album</strong> (new pages after yours) or <strong>A new album</strong> (same setup). A restore point is kept first either way.</li>
   </ol>
   <table>
     <tr><th>Column</th><th>What it does</th></tr>
-    <tr><td><strong>ID</strong></td><td>Catalogue number — required</td></tr>
-    <tr><td><strong>Width mm</strong>, <strong>Height mm</strong></td><td>The stamp's size — required; never shrunk</td></tr>
-    <tr><td>Page</td><td>Blank = the app decides (up to 8 stamps a page)</td></tr>
+    <tr><td>ID</td><td>Catalogue number — required</td></tr>
+    <tr><td>Width mm, Height mm</td><td>The stamp's size — required; never shrunk</td></tr>
+    <tr><td>Page</td><td>Blank = the tool decides (up to 8 a page)</td></tr>
     <tr><td>Caption</td><td>Blank = the ID; up to 4 lines</td></tr>
     <tr><td>Border</td><td>1 solid, 2 dashed, 3 perforated</td></tr>
-    <tr><td>Frame / Frame style</td><td>Same name = one frame round those stamps; style 1, 2 or 3 lines, perf, perf+rule, hidden</td></tr>
+    <tr><td>Frame / Frame style</td><td>Same name = one frame round those stamps; 1, 2 or 3 lines, perf, perf+rule, hidden</td></tr>
     <tr><td>Shape, Strip, Text inside</td><td>Square or triangle; yes = strip mount; e.g. the value</td></tr>
-    <tr><td>Section</td><td>Rows with the same section get their own Subheader</td></tr>
+    <tr><td>Section</td><td>Rows with the same section get their own Subtitle</td></tr>
     <tr><td>Have</td><td>Yes (owned) or no (wanted) — for the Inventory</td></tr>
-    <tr><td>Key</td><td>Leave blank (it is filled in by Download stamp list)</td></tr>
+    <tr><td>Key</td><td>Leave blank (Download stamp list fills it in)</td></tr>
   </table>
   <ul>
-    <li>The file is <strong>checked first</strong>: every problem is listed with its line number, and nothing is imported until it is fixed.</li>
-    <li>The stamps go on <strong>new pages after your current pages</strong>, in file order, each page Auto-aligned. Your existing pages are not touched.</li>
-    <li>A page given <strong>too many stamps</strong>: you are told first (“Page 3 has 14 stamps — room for 10”) and can choose Tight spacing, Dense margins, both, or putting the extra stamps on a new page — or cancel and change the file.</li>
-    <li>A stamp <strong>bigger than the printable area</strong> gets one warning and a page of its own, outlined in red.</li>
-    <li><strong>Undo import</strong> takes it all back in one step; <strong>Remove imported pages</strong> removes the last import's pages.</li>
+    <li>The file is checked first; every problem is listed with its line number and nothing is imported until it is fixed.</li>
+    <li>A page given too many stamps: the main choice is <strong>Put the extra stamps on a new page</strong>; Tight spacing and Dense margins are offered too.</li>
+    <li>Undo takes the import back in one step; <strong>Restore: before import</strong> on the first screen brings back the whole album as it was.</li>
   </ul>
   <h3>Download and reload the stamp list</h3>
-  <p><strong>Download stamp list</strong> writes every stamp to the same kind of file, with a <strong>Key</strong> for each (<strong>1_S1</strong> = page 1, stamp S1). Change it in your spreadsheet — <strong>don't edit the Key column</strong> — then <strong>Reload stamp list…</strong>. You see a summary first (updated · new · missing). Positions, headings and frames are kept; a page where a size changed is aligned again; a blank Key adds a stamp; a new Page number moves it; missing stamps are removed only if you choose. One Undo step.</p>
+  <p><strong>Download stamp list</strong> writes every stamp with a Key (1_S1 = page 1, stamp S1). Change it in your spreadsheet — not the Key column — then <strong>Reload stamp list…</strong>. You see a summary first (updated · new · missing); missing stamps are removed only if you say so. It is one Undo step.</p>
   <h3>Inventory</h3>
-  <p><strong>Inventory…</strong> lists every stamp — page, key, catalogue number, caption, size, owned or wanted, frame, section — with counts on top. Click a heading to sort, a row to go to the stamp. <strong>Download inventory</strong> saves it with totals for Excel or Numbers. The inventory is never printed.</p>
-  <h3>Your own layouts</h3>
-  <p><strong>Save this page as a layout…</strong> keeps the page's items and positions under a name (up to 12). It appears under <strong>+ Add page</strong> in every album, and travels with <strong>Download album</strong>.</p>
+  <p><strong>Inventory…</strong> lists every stamp — page, key, catalogue number, caption, size, owned or wanted, frame, section — with counts on top. Click a heading to sort, a row to go to the stamp. <strong>Download inventory</strong> saves it with totals for Excel or Numbers. Never printed.</p>
 
   <footer>
     Stamp Page Designer — How to, version 8.0.0.
