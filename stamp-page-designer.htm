@@ -4726,7 +4726,7 @@ function(t){t.__bidiEngine__=t.prototype.__bidiEngine__=function(t){var r,n,i,a,
           document.body.classList.remove("grabbing"); dragHint(false);
           if (!moved) {
             // 8.0.0: a second click on the same item soon after = double-click → type on the page
-            const now = Date.now(), dbl = S.lastTap && S.lastTap.id === id && now - S.lastTap.t < 500;
+            const now = Date.now(), dbl = S.lastTap && S.lastTap.id === id && now - S.lastTap.t < 900;
             S.lastTap = dbl ? null : { id, t: now };
             setSel([id]); drawCanvas(); drawPanel();
             if (dbl) inlineEdit(id);
